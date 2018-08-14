@@ -1,0 +1,14 @@
+<!--pages/my_packages/my_packages.wxml-->
+<!-- tabs -->
+<view class='tabs'>
+  <view class="tab" bindtap="goIndex">
+    <view class="index">全都</view>
+  </view>
+  <view class="tab active">
+    <view class="tabHead">我包裹</view>
+  </view>
+  <view class="tab" bindtap="goMyDeliveries">
+    <view class="myDeliveries">我快递</view>
+  </view>
+</view>
+<!-- tabs -->

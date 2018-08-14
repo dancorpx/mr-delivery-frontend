@@ -1,0 +1,32 @@
+/* pages/my_deliveries/my_deliveries.wxss */
+/**index.wxss**/
+.tabs {
+position: fixed;
+display: flex;
+height: 10vh;
+/* width: 100%; */
+justify-content: space-evenly;
+}
+.tab.active {
+  flex: 1;
+  width: 33vw;
+  color: black;
+  background: lightgray;
+  text-align: center;
+  padding-top: 10px;
+}
+.tab {
+  background: white;
+}
+.index {
+  flex: 1;
+  width: 33vw;
+  text-align: center;
+  padding-top: 10px;
+}
+.myPackages {
+  flex: 1;
+  width: 34vw;
+  text-align: center;
+  padding-top: 10px;
+}
