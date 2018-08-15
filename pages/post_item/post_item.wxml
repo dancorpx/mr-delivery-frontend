@@ -30,14 +30,15 @@
         <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
       </label>
     </radio-group>
+
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea placeholder='收货人' name="name_on_package" auto-height />
+        <textarea value='{{data.name}}test' name="name_on_package" auto-height />
       </view>
     </view>
       <view class="user-input">
         <view class="text-area-wrap">
-          <textarea placeholder='手机号' name="phone_on_package" auto-height />
+          <textarea value='{{data.phone_number}}test' name="phone_on_package" auto-height />
         </view>
       </view>
        <view class="user-input">
@@ -45,7 +46,8 @@
           <textarea placeholder='添加备注' name="comment" auto-height />
         </view>
       </view>
-    <button bindtap="grantAuthorizeLocation">改正地址</button>
+    <button bindtap="grantAuthorizeLocation">{{globalData.userAddressName}}改正地址
+    </button>
 
     <button class="submit-button" form-type="submit" >提交</button>
   </form>
