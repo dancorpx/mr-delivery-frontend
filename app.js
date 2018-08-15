@@ -1,7 +1,7 @@
 //app.js
 App({
   onLaunch: function () {
-    
+    console.log(444, this.globalData)
     const host = 'http://localhost:3000/api/v1/'
     console.log(111, 'processing to login')
     wx.login({
@@ -24,6 +24,7 @@ App({
             this.globalData.userAddressLng = res.data.userAddressLng
             this.globalData.userQR = res.data.userQR
             this.globalData.userPhoto = res.data.userPhoto
+            this.globalData.userAvatar = res.data.userAvatar
             console.log(444, this.globalData)
           }
         })
