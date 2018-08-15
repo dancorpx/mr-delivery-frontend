@@ -1,9 +1,11 @@
 //index.js
 //获取应用实例
 const app = getApp()
+const mock = require('../../mock/mock.js')
 
 Page({
   data: {
+  
  },
     goMyDeliveries: function() {
       wx.reLaunch({
@@ -20,14 +22,18 @@ Page({
  * 生命周期函数--监听页面加载
  */
   onLoad: function (options) {
-
+    this.setData({
+      users: mock.users,
+      deliveries: mock.deliveries,
+      packages: mock.packages,
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    // console.log(this.data.packages)
   },
 
   /**

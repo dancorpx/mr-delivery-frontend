@@ -11,4 +11,52 @@
     <view class="myDeliveries">我快递</view>
   </view>
 </view>
+
+<view style='padding-top:65px'></view>
+
+<!-- for each card: height: 200rpx -->
+<view class="flex-display">
+  <block wx:for="{{packages}}" wx:for-item="package" wx:key="packages">
+    <view class="card">
+      <view class="card-outer-border" bindtap='expandCard'>
+        <view class='row-1'>
+          <view class='avatar red-border'>
+            avatar
+          </view>
+          <view class='details red-border'>
+            <view class='location red-border'>
+              <view class='location-icon'>
+               ic
+              </view>
+              <view class='location-name red-border'>
+                {{package.delivery_location_name}}
+              </view>
+            </view>
+            <view class='time red-border'>
+              <view class='time-icon'>
+                ic
+              </view>
+              <view class='time-available'>
+                {{package.delivery_time_start}}-{{package.delivery_time_end}}
+              </view>
+            </view>
+          </view>
+          <view class='price red-border'>
+            {{package.price}}¥
+          </view>
+        </view>
+        <view class='row-2'>
+          <view class='package-icons red-border'>
+            package-icons
+          </view>
+          <view class='expand-button red-border'>
+            button
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+
 <!-- tabs -->

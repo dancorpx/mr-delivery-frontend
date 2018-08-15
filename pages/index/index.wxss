@@ -5,6 +5,7 @@ display: flex;
 height: 10vh;
 /* width: 100%; */
 justify-content: space-evenly;
+z-index: 1;
 }
 .tab.active {
   flex: 1;
@@ -28,4 +29,70 @@ justify-content: space-evenly;
   width: 34vw;
   text-align: center;
   padding-top: 10px;
+}
+
+.flex-display {
+  display: flex;
+  flex-direction: column
+}
+
+
+.card-outer-border {
+  margin: 10px;
+  border: 0.5px solid rgb(145, 145, 145);
+  border-radius: 3px;
+  padding-bottom: 5px;
+  background-color: white;
+  box-shadow: 3px 1px grey;
+}
+
+.row-1 {
+  height: 124rpx; 
+  display: flex;
+  align-ites: center
+}
+
+.row-2 {
+  height: 76rpx;
+  display: flex;
+  justify-content: space-evenly
+}
+
+
+.avatar {
+  /* justify-content: space-around */
+  width: 18%;
+  padding: 5rpx
+}
+
+.details {
+  width: 50%;
+  padding: 5rpx
+}
+
+.price {
+  width: 32%;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.red-border {
+  border: 1px solid red
 }
