@@ -1,0 +1,26 @@
+<!--pages/login_user/login_user.wxml-->
+<!-- heading -->
+<view class="container">
+  <view class="heading">登录</view>
+<!-- heading -->
+
+  <!-- form-->
+  <form bindsubmit="bindSubmit">
+    <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea placeholder="姓名"  name="name" auto-height />
+      </view>
+    </view>
+    <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea style="input-size" placeholder='学生卡号' class="input-height" name="student_id" maxlength='-1' />
+      </view>
+    </view>
+    
+    <!-- <map id="myMap" latitude="" longditude="" show-location style="width: 100%; height: 200px;" /> -->
+    <button bindtap="grantAuthorizeLocation">请选择宿舍楼</button>
+
+    <button class="submit-button" form-type="submit" >进入</button>
+  </form>
+</view>
+<!-- form -->

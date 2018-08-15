@@ -33,7 +33,8 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
+			"current": 3,
+
 			"list": [
 				{
 					"id": 0,
@@ -51,6 +52,12 @@
 					"id": 2,
 					"name": "my_packages",
 					"pathName": "pages/my_packages/my_packages",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "login_user",
+					"pathName": "pages/login_user/login_user",
 					"query": ""
 				}
 			]

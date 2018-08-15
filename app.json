@@ -2,12 +2,13 @@
   "pages": [
     "pages/index/index",
     "pages/my_packages/my_packages",
-    "pages/my_deliveries/my_deliveries"
+    "pages/my_deliveries/my_deliveries",
+    "pages/login_user/login_user"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "包裹先生",
+    "navigationBarTitleText": "包裹同学",
     "navigationBarTextStyle": "black"
   }
 }
