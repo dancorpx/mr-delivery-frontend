@@ -1,7 +1,7 @@
 // pages/login_user/login_user.js
 const app = getApp()
 const globalData = app.globalData
-const myRequest = require('../../lib/api/request');
+const myRequest = require('../../lib/api/request')
 
 Page({
   data: {},

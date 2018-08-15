@@ -21,7 +21,7 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            avatar
+            <image src="{{package.customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>
