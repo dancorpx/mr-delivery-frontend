@@ -24,13 +24,36 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 2,
+			"list": [
+				{
+					"id": 0,
+					"name": "index",
+					"pathName": "pages/index/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "my_deliveries",
+					"pathName": "pages/my_deliveries/my_deliveries",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "my_packages",
+					"pathName": "pages/my_packages/my_packages",
+					"query": ""
+				}
+			]
 		}
 	}
 }
