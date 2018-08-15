@@ -1,0 +1,17 @@
+/* pages/landing_page/landing_page.wxss */
+.banner {
+  align-content: center;
+  margin-top: 10vh;
+  margin-left: 10vw; 
+}
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  /* text-shadow: 0px 1px rgba(0, 0, 0, 0.2); */
+}
+.img {
+  height: 85vh;
+  width: 80vw;
+  /* padding-bottom: 25px;  */
+  border-radius: 4px;
+}
