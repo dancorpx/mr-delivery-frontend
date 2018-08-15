@@ -1,0 +1,16 @@
+<!--pages/landing_page/landing_page.wxml-->
+<!-- Banner component -->
+
+<view class="banner">
+  <view class="banner-content">
+    <view>
+      <image src="../../common/images/Placeholder-logo-long.jpg" class="img">
+     
+    <view class='title'>包裹同学</view>
+   </image>
+    </view>
+    
+     <view class='margin'/>
+     </view>
+</view>
+<!-- Banner component -->
