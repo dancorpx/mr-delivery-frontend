@@ -1,7 +1,6 @@
-//index.js
-//获取应用实例
 const app = getApp()
-const mock = require('../../mock/mock.js')
+const globalData = app.globalData
+const myRequest = require('../../lib/api/request')
 
 Page({
   data: {
@@ -22,11 +21,15 @@ Page({
  * 生命周期函数--监听页面加载
  */
   onLoad: function (options) {
-    this.setData({
-      users: mock.users,
-      deliveries: mock.deliveries,
-      packages: mock.packages,
-    })
+    let page = this
+    // Fetch Items from API
+    myRequest.get({
+      path: 'packages/available',
+        success(res) {
+          console.log(3333, res)
+          page.setData({packages: res.data.packages})
+        }
+      })
   },
 
   /**
