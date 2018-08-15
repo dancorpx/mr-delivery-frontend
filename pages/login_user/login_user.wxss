@@ -57,12 +57,6 @@ textarea {
   border-radius: 0px;
   border-left: 5px solid rgb(252, 223, 156);
 }
-/* map */
-map {
-  width: 100;
-}
-/*  */
-
 
 /* Button */
 .submit-button {

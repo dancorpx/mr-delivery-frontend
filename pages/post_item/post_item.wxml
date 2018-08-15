@@ -1,0 +1,52 @@
+<!--pages/post_item/post_item.wxml-->
+<!-- heading -->
+<view class="container">
+  <view class="heading">添加包装</view>
+<!-- heading -->
+<form bindsubmit="bindSubmit">
+    <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea placeholder="请输入快递代码"  name="kuai_di_code" auto-height />
+      </view>
+    </view>
+    
+    <view class="section">
+      <view class="section__title">请选择时间</view>
+      <picker mode="time" value="{{time1}}" start="00:01" end="23:59" bindchange="bindStartTimeChange">
+          <view class="picker text-area-wrap">
+            从: {{time1}}
+          </view>
+      </picker>
+      <picker mode="time" value="{{time2}}" start="00:01" end="23:59" bindchange="bindEndTimeChange">
+        <view class="picker text-area-wrap">
+           到: {{time2}}
+        </view>
+      </picker>
+    </view>
+    
+    <radio-group class="radio-group" bindchange="radioChange">
+    包装大小
+      <label class="radio" wx:for="{{items}}">
+        <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+      </label>
+    </radio-group>
+    <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea placeholder='收货人' name="name_on_package" auto-height />
+      </view>
+    </view>
+      <view class="user-input">
+        <view class="text-area-wrap">
+          <textarea placeholder='手机号' name="phone_on_package" auto-height />
+        </view>
+      </view>
+       <view class="user-input">
+        <view class="text-area-wrap">
+          <textarea placeholder='添加备注' name="comment" auto-height />
+        </view>
+      </view>
+    <button bindtap="grantAuthorizeLocation">改正地址</button>
+
+    <button class="submit-button" form-type="submit" >提交</button>
+  </form>
+</view>
