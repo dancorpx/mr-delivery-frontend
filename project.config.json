@@ -12,10 +12,8 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.2.2",
-
 	"appid": "wxfbe5c8b6a584ce04",
 	"projectname": "mr-delivery",
-
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -35,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 3,
+			"current": 4,
 			"list": [
 				{
 					"id": 0,
@@ -60,6 +58,11 @@
 					"name": "login_user",
 					"pathName": "pages/login_user/login_user",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "post_item",
+					"pathName": "pages/post_item/post_item"
 				}
 			]
 		}
