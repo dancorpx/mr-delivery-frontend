@@ -25,8 +25,8 @@
           </view>
           <view class='details red-border'>
             <view class='location red-border'>
-              <view class='location-icon'>
-               ic
+              <view class=''>
+               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon'></image>
               </view>
               <view class='location-name red-border'>
                 {{package.delivery_location_name}}
@@ -34,7 +34,7 @@
             </view>
             <view class='time red-border'>
               <view class='time-icon'>
-                ic
+                <image src="../../lib/images/clock-regular.svg" class='location-icon'></image>
               </view>
               <view class='time-available'>
                 {{package.delivery_time_start}}-{{package.delivery_time_end}}
@@ -47,16 +47,19 @@
         </view>
         <view class='row-2'>
           <view class='package-icons red-border'>
-            package-icons
+            <image src="../../lib/images/box-solid.svg" class="small padding {{package.size == 'Small' ? '' : 'fade' }}"></image>
+            <image src="../../lib/images/box-solid.svg" class="medium padding {{package.size == 'Medium' ? '' : 'fade' }}"></image>
+            <image src="../../lib/images/box-solid.svg" class="large padding {{package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
           <view class='expand-button red-border'>
-            button
+            展开
           </view>
         </view>
       </view>
     </view>
   </block>
 </view>
+
 
 
 <!-- tabs -->
