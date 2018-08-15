@@ -29,6 +29,19 @@ Page({
       },
       success(res) {
         console.log(98989, res)
+        if (res.data.statusCode != 200) {
+          wx.showModal({
+            title: 'Error',
+            content:`${res.data.error}`,
+            success: function (res) {
+              if (res.confirm) {
+                console.log('confirm')
+              } else if (res.cancel) {
+                console.log('cancel')
+              }
+            }
+          })
+        }else{
         globalData.userName = res.data.name
         globalData.userStudentNumber = res.data.student_number
         globalData.userPhoneNumber = res.data.phone_number
@@ -38,11 +51,15 @@ Page({
         globalData.userQR = res.data.static_pay_qr
         globalData.userPhoto = res.data.photo
         globalData.userAvatar = res.data.avatar
+
+        wx.showToast({ title: 'OK!', icon: 'success', duration: 1000 })
+        }
       }
     })
     setTimeout(function () {
-      wx.reLaunch({
-        url: '/pages/index/index'
+      wx.navigateBack({
+        // url: '/pages/index/index'
+        delta: 1
       })
     }, 1000)
   },
