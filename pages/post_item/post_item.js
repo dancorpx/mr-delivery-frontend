@@ -11,11 +11,7 @@ Page({
       { name: 'Medium', value: '中'},
       { name: 'Large', value: '大' },
     ],
-    name: globalData.userName,
-    phone_number: globalData.userPhoneNumber,
-    delivery_location_name: globalData.user.userAddressName,
-    delivery_location_lat: globalData.user.userAddressLat,
-    delivery_location_lng: globalData.user.userAddressLng,
+    size: "Small"
   },
 
   radioChange: function (e) {
@@ -46,11 +42,14 @@ Page({
         console.log(33, res)
         wx.chooseLocation({
           success: function (res) {
+            console.log(7777777, res)
+            console.log(77778888, page.data)
             page.setData({
               delivery_location_name: res.name,
               delivery_location_lat: res.latitude,
               delivery_location_lng: res.longitude
             })
+            console.log(78787878, page.data)
           },
         })
       },
@@ -86,14 +85,28 @@ Page({
       },
       success(res) {
         console.log(98989, res)
+        wx.showToast({ title: 'OK!', icon: 'success', duration: 1000 })
       }
     })
+    setTimeout(function () {
+      wx.navigateTo({
+        url: '/pages/index/index'   
+      })
+    }, 1000)
   },
 
 
 
   onLoad: function (options) {
-  
+    
+    this.setData({
+      name: globalData.userName,
+      phone_number: globalData.userPhoneNumber,
+      delivery_location_name: globalData.userAddressName,
+      delivery_location_lat: globalData.userAddressLat,
+      delivery_location_lng: globalData.userAddressLng,
+    })
+    console.log(112233, this.data)
   },
 
   /**

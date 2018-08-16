@@ -13,7 +13,7 @@
 </view>
 
 <view>
-  <image src="../../lib/images/icons8-plus-48.png" class='add-button'></image>
+  <button bindtap="bindAddPage"><image src="../../lib/images/icons8-plus-48.png" class='add-button'></image></button>
 </view>
 
 <view style='padding-top:65px'></view>
