@@ -32,9 +32,35 @@ Page({
       })
     }
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+
+ bindDestroy: function(e) {
+   let page = this
+   console.log(10000, e)
+
+   wx.showModal({
+     title: 'Delete?',
+     content: 'Are you sure you want to remove this package?',
+     success: function (res) {
+       if (res.confirm) {
+         myRequest.delete({
+           path: `packages/${e.currentTarget.dataset.hi}`,
+           success(res) {
+             console.log(33331111, res)
+             wx.showToast({ title: 'Deleted!', icon: 'success', duration: 1000 })
+           }
+         })
+         setTimeout(function () {
+           wx.navigateTo({
+             url: '/pages/my_packages/my_packages'
+           })
+         }, 1000)    
+         } else if (res.cancel) {
+         console.log('用户点击取消')
+         }
+     }
+   })
+ },
+
   onLoad: function (options) {
    let page = this
     console.log(111222, globalData.userId)

@@ -59,7 +59,7 @@
             <image src="../../lib/images/box-solid.svg" class="medium padding {{delivery.package.size == 'Medium' ? '' : 'fade' }}"></image>
             <image src="../../lib/images/box-solid.svg" class="large padding {{delivery.package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
-          <view class='cancel-button red-border'>
+          <view class='cancel-button red-border' bindtap="bindDestroy"data-hi="{{package.id}}">
             取消
           </view>
         </view>
