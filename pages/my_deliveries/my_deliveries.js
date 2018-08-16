@@ -1,12 +1,11 @@
-// pages/my_deliveries/my_deliveries.js
+const app = getApp()
+const globalData = app.globalData
+const myRequest = require('../../lib/api/request')
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
+  data: { },
+
   goIndex: function () {
     wx.reLaunch({
       url: '/pages/index/index'
@@ -18,12 +17,25 @@ Page({
     })
   },
 
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    let page = this
+    console.log(111222, globalData.userId)
+    myRequest.get({
+      path: `deliveries/accepted?${globalData.userId}`,
+      success(res) {
+        console.log(33331111, res)
+        page.setData({acceptedDeliveries: res.data.deliveries })
+        console.log
+      }
+    })
+    myRequest.get({
+      path: `deliveries/completed?${globalData.userId}`,
+      success(res) {
+        console.log(33331111, res)
+        page.setData({ completedDeliveries: res.data.deliveries })
+        console.log
+      }
+    })
   },
 
   /**

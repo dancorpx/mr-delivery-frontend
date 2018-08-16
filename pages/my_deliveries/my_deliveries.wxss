@@ -30,3 +30,163 @@ justify-content: space-evenly;
   text-align: center;
   padding-top: 10px;
 }
+
+.section-title {
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin:20rpx;
+}
+
+/**index.wxss**/
+.tabs {
+position: fixed;
+display: flex;
+height: 10vh;
+/* width: 100%; */
+justify-content: space-evenly;
+z-index: 1;
+}
+.tab.active {
+  flex: 1;
+  width: 33vw;
+  color: black;
+  background: lightgray;
+  text-align: center;
+  padding-top: 10px;
+}
+.tab {
+  background: white;
+}
+.myDeliveries {
+  flex: 1;
+  width: 33vw;
+  text-align: center;
+  padding-top: 10px;
+}
+.myPackages {
+  flex: 1;
+  width: 34vw;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.flex-display {
+  display: flex;
+  flex-direction: column
+}
+
+
+.card-outer-border {
+  margin: 10rpx;
+  border: 0.5rpx solid rgb(145, 145, 145);
+  border-radius: 3rpx;
+  padding-bottom: 5rpx;
+  background-color: white;
+  box-shadow: 3rpx 1px grey;
+}
+
+.row-1 {
+  height: 124rpx; 
+  display: flex;
+  align-ites: center
+}
+
+.row-2 {
+  height: 76rpx;
+  position: relative
+}
+
+
+.avatar {
+  /* justify-content: space-around */
+  width: 18%;
+  padding: 5rpx
+}
+
+.details {
+  width: 50%;
+  padding: 5rpx
+}
+
+.price {
+  width: 32%;
+  padding: 5rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.time {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* .red-border {
+  border: 1px solid red
+} */
+
+.location-icon {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.time-icon {
+  height: 40rpx;
+  width: 40rpx;
+}
+
+.package-icons {
+  /* display: flex;
+  align-items: center; */
+  position: absolute;
+  left: 50rpx;
+}
+
+.small {
+  height: 25rpx;
+  width: 25rpx;
+}
+
+.medium {
+  height: 37rpx;
+  width: 37rpx;
+}
+
+.large {
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.padding {
+  padding-left: 10rpx;
+  padding-right: 10rpx
+}
+
+.expand-button {
+  position: absolute;
+  right: 50rpx;
+  background-color: #FF5D00;
+  color: white;
+  text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
+  border-radius: 3rpx;
+}
+
+.red {
+  border: 1rpx solid red
+}
+
+.fade {
+  opacity: 0.1;
+}
