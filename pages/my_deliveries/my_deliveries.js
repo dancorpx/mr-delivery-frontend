@@ -21,7 +21,7 @@ Page({
     let page = this
     console.log(111222, globalData.userId)
     myRequest.get({
-      path: `deliveries/accepted?${globalData.userId}`,
+      path: `deliveries/accepted?worker_id=${globalData.userId}`,
       success(res) {
         console.log(33331111, res)
         page.setData({acceptedDeliveries: res.data.deliveries })
@@ -29,7 +29,7 @@ Page({
       }
     })
     myRequest.get({
-      path: `deliveries/completed?${globalData.userId}`,
+      path: `deliveries/completed?worker_id=${globalData.userId}`,
       success(res) {
         console.log(33331111, res)
         page.setData({ completedDeliveries: res.data.deliveries })
