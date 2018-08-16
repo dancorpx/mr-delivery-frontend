@@ -32,5 +32,15 @@ App({
     })
   },
   globalData: {
+    // userId: null,
+    // userName: null,
+    // userStudentNumber: null,
+    // userPhoneNumber: null,
+    // userAddressName: null,
+    // userAddressLat: null,
+    // userAddressLng: null,
+    // userQR: null,
+    // userPhoto: null,
+    // userAvatar: null
   }   
 })

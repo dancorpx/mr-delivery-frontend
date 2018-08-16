@@ -12,7 +12,10 @@ Page({
       { name: 'Large', value: '大' },
     ],
     name: globalData.userName,
-    phone_number: globalData.userPhoneNumber
+    phone_number: globalData.userPhoneNumber,
+    delivery_location_name: globalData.user.userAddressName,
+    delivery_location_lat: globalData.user.userAddressLat,
+    delivery_location_lng: globalData.user.userAddressLng,
   },
 
   radioChange: function (e) {
@@ -36,13 +39,18 @@ Page({
   },
   
   grantAuthorizeLocation: function () {
+    let page = this
     wx.authorize({
       scope: 'scope.userLocation',
       success(res) {
         console.log(33, res)
         wx.chooseLocation({
           success: function (res) {
-            console.log(44, res)
+            page.setData({
+              delivery_location_name: res.name,
+              delivery_location_lat: res.latitude,
+              delivery_location_lng: res.longitude
+            })
           },
         })
       },
@@ -69,9 +77,9 @@ Page({
         kuai_di_code: e.detail.value.kuai_di_code,
         size: page.data.size,
         price: 3,
-        // delivery_location_name: ,
-        // delivery_location_lat: ,
-        // delivery_location_lng: ,
+        delivery_location_name: page.data.delivery_location_name ,
+        delivery_location_lat: page.data.delivery_location_lat,
+        delivery_location_lng: page.data.delivery_location_lng,
         delivery_time_start: page.data.time1,
         delivery_time_end: page.data.time2,
         comment: e.detail.value.comment
