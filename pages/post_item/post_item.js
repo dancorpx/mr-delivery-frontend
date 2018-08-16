@@ -1,20 +1,31 @@
 // pages/post_item/post_item.js
+const app = getApp()
+const globalData = app.globalData
+const myRequest = require('../../lib/api/request')
+
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
     items: [
-      { name: 'small', value: '小', checked: 'true' },
-      { name: 'medium', value: '中'},
-      { name: 'large', value: '大' },
- 
-    ]
-
+      { name: 'Small', value: '小', checked: 'true' },
+      { name: 'Medium', value: '中'},
+      { name: 'Large', value: '大' },
+    ],
+    name: globalData.userName,
+    phone_number: globalData.userPhoneNumber,
+    delivery_location_name: globalData.user.userAddressName,
+    delivery_location_lat: globalData.user.userAddressLat,
+    delivery_location_lng: globalData.user.userAddressLng,
   },
+
+  radioChange: function (e) {
+    console.log(e)
+    console.log(46464646464, e.detail.value)
+    this.setData({size: e.detail.value})
+  },
+
   bindStartTimeChange: function (e) {
+   
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       time1: e.detail.value
@@ -28,13 +39,18 @@ Page({
   },
   
   grantAuthorizeLocation: function () {
+    let page = this
     wx.authorize({
       scope: 'scope.userLocation',
       success(res) {
         console.log(33, res)
         wx.chooseLocation({
           success: function (res) {
-            console.log(44, res)
+            page.setData({
+              delivery_location_name: res.name,
+              delivery_location_lat: res.latitude,
+              delivery_location_lng: res.longitude
+            })
           },
         })
       },
@@ -43,9 +59,39 @@ Page({
       }
     })
   },
-  /**
-   * 生命周期函数--监听页面加载
-   */
+  
+  bindSubmit: function (e) {
+    let page = this
+    console.log(11111, e)
+    page.setData({
+      name: e.detail.value.name,
+      phone_number: e.detail.value.phone_number,
+      student_number: e.detail.value.student_number
+    })
+    myRequest.post({
+      path: `packages`,
+      data: {
+        customer_id: globalData.userId,
+        name_on_package:  e.detail.value.name_on_package ,
+        phone_on_package: e.detail.value.phone_on_package ,
+        kuai_di_code: e.detail.value.kuai_di_code,
+        size: page.data.size,
+        price: 3,
+        delivery_location_name: page.data.delivery_location_name ,
+        delivery_location_lat: page.data.delivery_location_lat,
+        delivery_location_lng: page.data.delivery_location_lng,
+        delivery_time_start: page.data.time1,
+        delivery_time_end: page.data.time2,
+        comment: e.detail.value.comment
+      },
+      success(res) {
+        console.log(98989, res)
+      }
+    })
+  },
+
+
+
   onLoad: function (options) {
   
   },
