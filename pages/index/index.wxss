@@ -61,7 +61,14 @@ z-index: 1;
 .avatar {
   /* justify-content: space-around */
   width: 18%;
-  padding: 5rpx
+  border-radius: 10rpx;
+  margin-left: 5rpx;
+}
+.avatar-img {
+  /* justify-content: space-around */
+  width: 100%;
+  height:100%;
+  border-radius: 10rpx;
 }
 
 .details {
@@ -83,6 +90,7 @@ z-index: 1;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  
 }
 
 .time {
@@ -95,6 +103,12 @@ z-index: 1;
 /* .red-border {
   border: 1px solid red
 } */
+.location-name{
+  width: 300rpx;
+  height:63rpx;
+  overflow:hidden;
+  text-overflow: ellipsis;
+}
 
 .location-icon {
   height: 40rpx;
