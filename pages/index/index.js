@@ -17,7 +17,7 @@ Page({
   },
 
   bindAddPage: function(e) {
-    if (globalData.userName === undefined) {
+    if (globalData.userName === null) {
       wx.navigateTo({
         url: '/pages/login_user/login_user',
       })
