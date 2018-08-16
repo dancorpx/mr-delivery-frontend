@@ -29,7 +29,7 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            <image src="{{customer.avatar}}" ></image>
+            <image class="avatar-img" src="{{package.customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>
@@ -78,7 +78,56 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            <image src="{{customer.avatar}}" ></image>
+            <image class="avatar-img" src="{{customer.avatar}}" ></image>
+          </view>
+          <view class='details red-border'>
+            <view class='location red-border'>
+              <view class=''>
+               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon'></image>
+              </view>
+              <view class='location-name red-border'>
+                {{package.delivery_location_name}}
+              </view>
+            </view>
+            <view class='time red-border'>
+              <view class='time-icon'>
+                <image src="../../lib/images/clock-regular.svg" class='location-icon'></image>
+              </view>
+              <view class='time-available'>
+                {{package.delivery_time_start}}-{{package.delivery_time_end}}
+              </view>
+            </view>
+          </view>
+          <view class='price red-border'>
+            {{package.price}}¥
+          </view>
+        </view>
+        <view class='row-2'>
+          <view class='package-icons red-border'>
+            <image src="../../lib/images/box-solid.svg" class="small padding {{delivery.package.size == 'Small' ? '' : 'fade' }}"></image>
+            <image src="../../lib/images/box-solid.svg" class="medium padding {{delivery.package.size == 'Medium' ? '' : 'fade' }}"></image>
+            <image src="../../lib/images/box-solid.svg" class="large padding {{delivery.package.size == 'Large' ? '' : 'fade' }}"></image>
+          </view>
+          <view class='call-button red-border'>
+            打电话
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>
+
+<!-- my completed packages  -->
+
+  <view class="section-title">已收包裹Completed?</view>
+
+<view class="flex-display">
+  <block wx:for="{{acceptedPackages}}" wx:for-item="package" wx:key="packages">
+    <view class="card">
+      <view class="card-outer-border" bindtap='expandCard'>
+        <view class='row-1'>
+          <view class='avatar red-border'>
+            <image class="avatar-img" src="{{customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>

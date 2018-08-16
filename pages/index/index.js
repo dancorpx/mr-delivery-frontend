@@ -28,6 +28,42 @@ Page({
     }
   },
 
+  bindAddDelivery: function(e) {
+    let page = this
+    console.log(111122223333,e)
+    wx.showModal({
+      title: 'Accept?',
+      content: 'Once accepted you have to delivery this package, you can call the other student to organise!"',
+      success: function (res) {
+        if (res.confirm) {
+          myRequest.post({
+            path: 'deliveries',
+            data: {
+              worker_id: globalData.userId,
+              package_id: e.currentTarget.dataset.hi
+            },
+            success(res) {
+              console.log(98989, res)
+              myRequest.put({
+                path: `packages/${e.currentTarget.dataset.hi}`,
+                data: {
+                  available: false,
+                  accepted: true,
+                },
+                success(res){
+                  console.log(999999, res)
+                }
+                })
+              wx.showToast({ title: 'OK!', icon: 'success', duration: 1000 })
+            }
+          })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+
   onLoad: function (options) {
     let page = this
     // Fetch Items from API

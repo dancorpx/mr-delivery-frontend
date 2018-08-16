@@ -24,7 +24,7 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            <image src="{{delivery.customer.avatar}}" ></image>
+            <image class="avatar-img" src="{{delivery.customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>
@@ -73,7 +73,7 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            <image src="{{delivery.customer.avatar}}" ></image>
+            <image class="avatar-img" src="{{delivery.customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>
