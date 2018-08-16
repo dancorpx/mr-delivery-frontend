@@ -21,6 +21,17 @@ Page({
       url: '/pages/index/index'
     })
   },
+  bindAddPage: function (e) {
+    if (globalData.userName === undefined) {
+      wx.navigateTo({
+        url: '/pages/login_user/login_user',
+      })
+    } else {
+      wx.navigateTo({
+        url: '/pages/post_item/post_item',
+      })
+    }
+  },
   /**
    * 生命周期函数--监听页面加载
    */
