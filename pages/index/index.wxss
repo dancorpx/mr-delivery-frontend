@@ -149,3 +149,12 @@ z-index: 1;
 .fade {
   opacity: 0.1;
 }
+
+.add-button {
+  height: 150rpx;
+  width: 150rpx;
+  position: fixed;
+  right: 50rpx;
+  top: 900rpx;
+  z-index: 3;
+}
