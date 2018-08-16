@@ -1,11 +1,15 @@
 // pages/my_packages/my_packages.js
+const app = getApp()
+const globalData = app.globalData
+const myRequest = require('../../lib/api/request')
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-  
+   
   },
   goMyDeliveries: function () {
     wx.reLaunch({
@@ -21,7 +25,33 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+   let page = this
+    console.log(111222, globalData.userId)
+    // myRequest.get({
+    //   path: `packages/avaliable?${globalData.userId}`,
+    //   success(res) {
+    //     console.log(33331111, res)
+    //     page.setData({ availablePackages: res.data.packages })
+    //     console.log
+    //   }
+    // })
+    myRequest.get({
+          path: `packages/available?customer_id=${globalData.userId}`,
+          success(res) {
+          console.log(33331111, res)
+          page.setData({ availablePackages: res.data.packages })
+          console.log
+        }
+      })
+    myRequest.get({
+      path: `packages/accepted?customer_id=${globalData.userId}`,
+        success(res) {
+          console.log(33331111, res)
+          page.setData({ acceptedPackages: res.data.packages })
+          console.log
+        }
+      })
+   
   },
 
   /**
