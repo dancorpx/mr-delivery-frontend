@@ -3,9 +3,8 @@ const globalData = app.globalData
 const myRequest = require('../../lib/api/request')
 
 Page({
-  data: {
-  
- },
+  data: {},
+
     goMyDeliveries: function() {
       wx.reLaunch({
        url: '/pages/my_deliveries/my_deliveries'
@@ -17,16 +16,24 @@ Page({
     })
   },
 
-  /**
- * 生命周期函数--监听页面加载
- */
+  bindAddPage: function(e) {
+    if (globalData.userName === undefined) {
+      wx.navigateTo({
+        url: '/pages/login/login',
+      })
+    }else{
+      wx.navigateTo({
+        url: '/pages/post_item/post_item',
+      })
+    }
+  },
+
   onLoad: function (options) {
     let page = this
     // Fetch Items from API
     myRequest.get({
       path: 'packages/available',
         success(res) {
-          console.log(3333, res)
           page.setData({packages: res.data.packages})
         }
       })
