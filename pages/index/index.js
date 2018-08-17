@@ -88,6 +88,11 @@ Page({
               wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
             }
           })
+          setTimeout(function () {
+            wx.navigateTo({
+              url: '/pages/my_deliveries/my_deliveries'
+            })
+          }, 1000)
         } else if (res.cancel) {
           console.log('用户点击取消')
         }
@@ -108,8 +113,10 @@ Page({
            
             trimmedNames.push(element.delivery_location_name.replace("四川大学江安校区", ""))
           })
-          page.setData({packages: res.data.packages})
+        
+          page.setData({packages: res.data.packages.reverse()})
           page.setData({ trimmedNames: trimmedNames })
+
          console.log(88888, page.data)
         }
       })

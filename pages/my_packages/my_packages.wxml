@@ -15,7 +15,7 @@
 
 <!-- add button -->
 <view>
-  <button bindtap="bindAddPage"><image src="../../lib/images/icons8-plus-48.png" class='add-button'></image></button>
+  <button bindtap="bindAddPage"><image src="../../common/images/plus.png" class='add-button'></image></button>
 </view>
 <!-- add button -->
 
@@ -127,7 +127,7 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            <image class="avatar-img" src="{{customer.avatar}}" ></image>
+            <image class="avatar-img" src="{{package.customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>

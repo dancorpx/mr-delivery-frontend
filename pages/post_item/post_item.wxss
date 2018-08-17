@@ -8,9 +8,23 @@
   padding-top: 100rpx;
   padding-bottom: 0rpx;
   box-sizing: border-box;
+
 }
 page {
   background-color:#9FDAF0;
+}
+
+.section__title {
+  color: rgb(130, 130, 130);
+}
+
+.section-time {
+  display:flex;
+  align-items: center;
+  justify-content: space-around;
+}
+picker {
+  width: 300rpx;
 }
 
 .heading {
@@ -35,6 +49,9 @@ page {
 radio {
   padding: 30rpx;
 }
+radio-group {
+  color: rgb(130, 130, 130);
+}
 /* Button */
 .submit-button {
   background-color: #FF5D00;
@@ -44,6 +61,7 @@ radio {
   margin-left: 60px;
   /* box-shadow: 0 8px 6px -6px #000000 ; */
   font-weight: bold;
+  background-color: green;
 }
 button {
   margin-top:  20rpx;

@@ -89,7 +89,7 @@ Page({
       }
     })
     setTimeout(function () {
-      wx.navigateTo({
+      wx.reLaunch({
         url: '/pages/index/index'   
       })
     }, 1000)
