@@ -10,7 +10,7 @@
   /* text-shadow: 0px 1px rgba(0, 0, 0, 0.2); */
 }
 .img {
-  height: 85vh;
+  height: 80vh;
   width: 80vw;
   /* padding-bottom: 25px;  */
   border-radius: 4px;

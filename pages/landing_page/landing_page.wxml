@@ -4,7 +4,7 @@
 <view class="banner">
   <view class="banner-content">
     <view>
-      <image src="../../common/images/Placeholder-logo-long.jpg" class="img">
+      <image src="../../common/images/mrD-logo-long.jpg" class="img">
      
     <view class='title'>包裹同学</view>
    </image>
