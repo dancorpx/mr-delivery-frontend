@@ -5,10 +5,10 @@
    <view class="tabHead">全都</view>
   </view>
   <view class="tab" bindtap="goMyPackages">
-    <view class="myPackages">我包裹</view>
+    <view class="myPackages">我的包裹</view>
   </view>
   <view class="tab" bindtap="goMyDeliveries">
-    <view class="myDeliveries">我快递</view>
+    <view class="myDeliveries">送快递</view>
   </view>
 </view>
 
@@ -56,7 +56,7 @@
             <image src="../../lib/images/box-solid.svg" class="large padding {{package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
           <view class='expand-button red-border'>
-            展开
+            送包裹
           </view>
         </view>
       </view>
