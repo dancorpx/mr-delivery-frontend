@@ -61,6 +61,17 @@ Page({
    })
  },
 
+ bindPhone: function (e) {
+    myRequest.get({
+      path: `deliveries/${e.currentTarget.dataset.delivery.delivery.id}`,
+      success(res) {
+        wx.makePhoneCall({
+      phoneNumber: `${res.data.worker.phone_number}`
+    })
+      }
+    })
+ },
+
   onLoad: function (options) {
    let page = this
     console.log(111222, globalData.userId)

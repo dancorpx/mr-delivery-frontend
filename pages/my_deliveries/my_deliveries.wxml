@@ -54,8 +54,8 @@
             <image src="../../lib/images/box-solid.svg" class="medium padding {{delivery.package.size == 'Medium' ? '' : 'fade' }}"></image>
             <image src="../../lib/images/box-solid.svg" class="large padding {{delivery.package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
-          <view class='expand-button red-border'>
-            展开
+          <view class='expand-button red-border' bindtap="bindPhone" data-userPhone="{{delivery.customer.phone_number}}">
+            打电话
           </view>
         </view>
       </view>
