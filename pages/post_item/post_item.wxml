@@ -12,6 +12,7 @@
     
     <view class="section">
       <view class="section__title">请选择时间</view>
+       <view class="section-time">
       <picker mode="time" value="{{time1}}" start="00:01" end="23:59" bindchange="bindStartTimeChange">
           <view class="picker text-area-wrap">
             从: {{time1}}
@@ -22,6 +23,7 @@
            到: {{time2}}
         </view>
       </picker>
+      </view>
     </view>
     
     <radio-group class="radio-group" bindchange="radioChange">
