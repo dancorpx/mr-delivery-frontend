@@ -11,13 +11,17 @@ z-index: 1;
 .tab.active {
   flex: 1;
   width: 33vw;
-  color: black;
-  background: lightgray;
+  color: white;
+  background: #9FDAF0;
+  font-weight: bold;
   text-align: center;
   padding-top: 10px;
+  border-bottom: 1px solid #9FDAF0;
 }
 .tab {
   background: white;
+  font-size: 40rpx;
+  border-bottom: 1px solid lightgrey;
 }
 .index {
   flex: 1;
