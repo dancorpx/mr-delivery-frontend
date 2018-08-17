@@ -28,14 +28,16 @@ Page({
     }
   },
 
-  // getPackageCustomer: function (package_id) {
-  //   myRequest.get({
-  //     path: `packages/${package_id}`,
-  //     success(res) {
-  //       res.data.customer.id
-  //     }
-  //   })
-  // },
+  openLocation: function (e) {
+    console.log(1122334455,e.currentTarget.dataset.package.delivery_location_lat)
+    wx.openLocation({
+      latitude: e.currentTarget.dataset.package.delivery_location_lat,
+      longitude: e.currentTarget.dataset.package.delivery_location_lng,
+      scale: 18
+    })
+  },
+
+
 
   bindAddDelivery: function(e) {
     let page = this
