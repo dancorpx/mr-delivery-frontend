@@ -17,6 +17,13 @@ Page({
     })
   },
 
+  bindPhone: function (e) {
+    console.log(556644, e.currentTarget.dataset.userphone)
+    wx.makePhoneCall({
+      phoneNumber: `${e.currentTarget.dataset.userphone}`
+    })
+  },
+
   onLoad: function (options) {
     let page = this
     console.log(111222, globalData.userId)
