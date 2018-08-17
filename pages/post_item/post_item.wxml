@@ -46,7 +46,9 @@
           <textarea placeholder='添加备注' name="comment" auto-height />
         </view>
       </view>
+
     <button bindtap="grantAuthorizeLocation">{{delivery_location_name}}
+
     </button>
 
     <button class="submit-button" form-type="submit" >提交</button>

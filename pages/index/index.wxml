@@ -56,8 +56,10 @@
             <image src="../../lib/images/box-solid.svg" class="medium padding {{package.size == 'Medium' ? '' : 'fade' }}"></image>
             <image src="../../lib/images/box-solid.svg" class="large padding {{package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
+
           <view class='expand-button red-border' bindtap="bindAddDelivery" data-hi="{{package.id}}" data-customer_id="{{package.customer_id}}">
           添加包裹
+
           </view>
         </view>
       </view>
