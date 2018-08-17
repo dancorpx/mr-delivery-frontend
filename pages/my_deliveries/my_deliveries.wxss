@@ -95,7 +95,8 @@ z-index: 1;
 
 .row-2 {
   height: 76rpx;
-  position: relative
+  position: relative;
+  flex: space-evenly;
 }
 
 
@@ -181,15 +182,23 @@ z-index: 1;
   padding-right: 10rpx
 }
 
-.expand-button {
+.call-button {
   position: absolute;
-  right: 50rpx;
+  right: 30rpx;
   background-color: #FF5D00;
   color: white;
   text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
   border-radius: 3rpx;
+  padding: 5rpx;
 }
-
+.confirm-button {
+  text-align: center;
+  position: absolute;
+  background-color: green;
+  color: white;
+  margin-left: 480rpx;
+  padding: 5rpx;
+}
 .red {
   border: 1rpx solid red
 }
