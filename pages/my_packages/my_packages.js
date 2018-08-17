@@ -33,6 +33,15 @@ Page({
     }
   },
 
+  openLocation: function (e) {
+    console.log(1122334455, e.currentTarget.dataset.package.delivery_location_lat)
+    wx.openLocation({
+      latitude: e.currentTarget.dataset.package.delivery_location_lat,
+      longitude: e.currentTarget.dataset.package.delivery_location_lng,
+      scale: 18
+    })
+  },
+
  bindDestroy: function(e) {
    let page = this
    console.log(10000, e)

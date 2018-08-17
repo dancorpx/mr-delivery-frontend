@@ -17,6 +17,15 @@ Page({
     })
   },
 
+  openLocation: function (e) {
+    console.log(1122334455, e.currentTarget.dataset.package.delivery_location_lat)
+    wx.openLocation({
+      latitude: e.currentTarget.dataset.package.delivery_location_lat,
+      longitude: e.currentTarget.dataset.package.delivery_location_lng,
+      scale: 18
+    })
+  },
+
   bindPhone: function (e) {
     console.log(556644, e.currentTarget.dataset.userphone)
     wx.makePhoneCall({

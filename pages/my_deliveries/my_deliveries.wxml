@@ -29,7 +29,7 @@
           <view class='details red-border'>
             <view class='location red-border'>
               <view class=''>
-               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon'></image>
+               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon' bindtap="openLocation" data-package="{{delivery.package}}"></image>
               </view>
               <view class='location-name red-border'>
                 {{delivery.package.delivery_location_name}}
@@ -78,7 +78,7 @@
           <view class='details red-border'>
             <view class='location red-border'>
               <view class=''>
-               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon'></image>
+               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon' bindtap="openLocation" data-package="{{package}}"></image>
               </view>
               <view class='location-name red-border'>
                 {{delivery.package.delivery_location_name}}
