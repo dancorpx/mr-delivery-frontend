@@ -15,7 +15,7 @@
 
 <!-- add button -->
 <view>
-  <button bindtap="bindAddPage"><image src="../../lib/images/icons8-plus-48.png" class='add-button'></image></button>
+  <button bindtap="bindAddPage"><image src="../../common/images/plus.png" class='add-button'></image></button>
 </view>
 <!-- add button -->
 
