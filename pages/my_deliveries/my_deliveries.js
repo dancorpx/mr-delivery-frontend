@@ -72,7 +72,7 @@ Page({
       path: `deliveries/accepted?worker_id=${globalData.userId}`,
       success(res) {
         console.log(33331111, res)
-        page.setData({acceptedDeliveries: res.data.deliveries })
+        page.setData({acceptedDeliveries: res.data.deliveries.reverse() })
         console.log
       }
     })
@@ -80,7 +80,7 @@ Page({
       path: `deliveries/completed?worker_id=${globalData.userId}`,
       success(res) {
         console.log(33331111, res)
-        page.setData({ completedDeliveries: res.data.deliveries })
+        page.setData({ completedDeliveries: res.data.deliveries.reverse() })
         console.log
       }
     })
