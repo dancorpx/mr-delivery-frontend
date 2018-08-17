@@ -38,15 +38,15 @@ Page({
    console.log(10000, e)
 
    wx.showModal({
-     title: 'Delete?',
-     content: 'Are you sure you want to remove this package?',
+     title: '删除',
+     content: '你是否确定删除这个包裹?',
      success: function (res) {
        if (res.confirm) {
          myRequest.delete({
            path: `packages/${e.currentTarget.dataset.hi}`,
            success(res) {
              console.log(33331111, res)
-             wx.showToast({ title: 'Deleted!', icon: 'success', duration: 1000 })
+             wx.showToast({ title: '成功删除!', icon: 'success', duration: 1000 })
            }
          })
          setTimeout(function () {

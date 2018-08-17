@@ -46,8 +46,8 @@ Page({
       })
     } else if (globalData.userId ===  e.currentTarget.dataset.customer_id) {
       wx.showModal({
-        title: 'Error!',
-        content: "You can't add your own package!",
+        title: ' 错误!',
+        content: "你不能添加自己的包裹!",
         success: function (res) {
           if (res.confirm) {
             console.log('confirm')
@@ -58,8 +58,8 @@ Page({
       })
     } else {
     wx.showModal({
-      title: 'Accept?',
-      content: 'Once accepted you have to delivery this package, you can call the other student to organise!"',
+      title: '是否确认?',
+      content: '一旦确认，你需要将包裹送至目的地',
       success: function (res) {
         if (res.confirm) {
           myRequest.post({
@@ -80,7 +80,7 @@ Page({
                   console.log(999999, res)
                 }
                 })
-              wx.showToast({ title: 'OK!', icon: 'success', duration: 1000 })
+              wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
             }
           })
         } else if (res.cancel) {

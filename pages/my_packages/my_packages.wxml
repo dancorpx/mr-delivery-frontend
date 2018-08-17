@@ -5,10 +5,10 @@
     <view class="index">全都</view>
   </view>
   <view class="tab active">
-    <view class="tabHead">我包裹</view>
+    <view class="tabHead">我的包裹</view>
   </view>
   <view class="tab" bindtap="goMyDeliveries">
-    <view class="myDeliveries">我快递</view>
+    <view class="myDeliveries">送快递</view>
   </view>
 </view>
 <!-- tabs -->
@@ -22,7 +22,7 @@
 <view style='padding-top:65px'></view>
 
 <!-- for each card: height: 200rpx -->
-<view class="section-title">未收包裹</view>
+<view class="section-title">未被确认包裹</view>
 <view class="flex-display">
   <block wx:for="{{availablePackages}}" wx:for-item="package" wx:key="packages">
     <view class="card">
@@ -70,7 +70,7 @@
 
 <!-- my accepted packages  -->
 
-  <view class="section-title">已收包裹</view>
+  <view class="section-title">快递运送中</view>
 
 <view class="flex-display">
   <block wx:for="{{acceptedPackages}}" wx:for-item="package" wx:key="packages">
@@ -119,7 +119,7 @@
 
 <!-- my completed packages  -->
 
-  <view class="section-title">已收包裹Completed?</view>
+  <view class="section-title">已送达包裹</view>
 
 <view class="flex-display">
   <block wx:for="{{completedPackages}}" wx:for-item="package" wx:key="packages">

@@ -1,7 +1,7 @@
 <!--pages/post_item/post_item.wxml-->
 <!-- heading -->
 <view class="container">
-  <view class="heading">添加包装</view>
+  <view class="heading">添加包裹</view>
 <!-- heading -->
 <form bindsubmit="bindSubmit">
     <view class="user-input">
@@ -25,7 +25,7 @@
     </view>
     
     <radio-group class="radio-group" bindchange="radioChange">
-    包装大小
+    包裹大小
       <label class="radio" wx:for="{{items}}">
         <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
       </label>
@@ -46,7 +46,9 @@
           <textarea placeholder='添加备注' name="comment" auto-height />
         </view>
       </view>
+
     <button bindtap="grantAuthorizeLocation">{{delivery_location_name}}
+
     </button>
 
     <button class="submit-button" form-type="submit" >提交</button>
