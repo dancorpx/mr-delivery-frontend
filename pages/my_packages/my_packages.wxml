@@ -78,7 +78,7 @@
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
           <view class='avatar red-border'>
-            <image class="avatar-img" src="{{customer.avatar}}" ></image>
+            <image class="avatar-img" src="{{package.customer.avatar}}" ></image>
           </view>
           <view class='details red-border'>
             <view class='location red-border'>
@@ -122,7 +122,7 @@
   <view class="section-title">已收包裹Completed?</view>
 
 <view class="flex-display">
-  <block wx:for="{{acceptedPackages}}" wx:for-item="package" wx:key="packages">
+  <block wx:for="{{completedPackages}}" wx:for-item="package" wx:key="packages">
     <view class="card">
       <view class="card-outer-border" bindtap='expandCard'>
         <view class='row-1'>
@@ -157,9 +157,9 @@
             <image src="../../lib/images/box-solid.svg" class="medium padding {{package.size == 'Medium' ? '' : 'fade' }}"></image>
             <image src="../../lib/images/box-solid.svg" class="large padding {{package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
-          <view class='call-button red-border'>
+          <!-- <view class='call-button red-border'>
             打电话
-          </view>
+          </view> -->
         </view>
       </view>
     </view>
