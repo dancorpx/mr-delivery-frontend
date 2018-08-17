@@ -94,12 +94,19 @@ Page({
     myRequest.get({
       path: `packages/accepted?customer_id=${globalData.userId}`,
         success(res) {
-          console.log(33331111, res)
+          console.log(33332222, res)
           page.setData({ acceptedPackages: res.data.packages })
           console.log
         }
       })
-   
+    myRequest.get({
+      path: `packages/completed?customer_id=${globalData.userId}`,
+      success(res) {
+        console.log(33333333, res)
+        page.setData({completedPackages: res.data.packages})
+        console.log
+      }
+    })
   },
 
   /**
