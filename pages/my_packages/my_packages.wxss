@@ -173,6 +173,8 @@ z-index: 1;
   text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
   border-radius: 5rpx;
   padding: 8rpx;
+  width: 100rpx;
+  text-align: center;
 }
 
 .red {
