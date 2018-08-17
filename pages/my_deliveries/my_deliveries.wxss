@@ -1,11 +1,12 @@
 /* pages/my_deliveries/my_deliveries.wxss */
-/**index.wxss**/
+/**tabs**/
 .tabs {
 position: fixed;
 display: flex;
-height: 10vh;
+height: 8vh;
 /* width: 100%; */
 justify-content: space-evenly;
+z-index: 1;
 }
 .tab.active {
   flex: 1;
@@ -39,44 +40,18 @@ justify-content: space-evenly;
   margin:20rpx;
 }
 
-/**index.wxss**/
-.tabs {
-position: fixed;
-display: flex;
-height: 10vh;
-/* width: 100%; */
-justify-content: space-evenly;
-z-index: 1;
-}
-.tab.active {
-  flex: 1;
-  width: 33vw;
-  color: black;
-  background: lightgray;
-  text-align: center;
-  padding-top: 10px;
-}
-.tab {
-  background: white;
-}
 .myDeliveries {
   flex: 1;
   width: 33vw;
   text-align: center;
   padding-top: 10px;
 }
-.myPackages {
-  flex: 1;
-  width: 34vw;
-  text-align: center;
-  padding-top: 10px;
-}
+/* tabs */
 
 .flex-display {
   display: flex;
   flex-direction: column
 }
-
 
 .card-outer-border {
   margin: 10rpx;

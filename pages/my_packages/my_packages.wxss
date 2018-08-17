@@ -3,7 +3,7 @@
 .tabs {
 position: fixed;
 display: flex;
-height: 10vh;
+height: 8vh;
 /* width: 100%; */
 justify-content: space-evenly;
 z-index: 1;
@@ -166,11 +166,12 @@ z-index: 1;
 
 .cancel-button {
   position: absolute;
-  right: 50rpx;
+  right: 30rpx;
   background-color: red;
   color: white;
   text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
   border-radius: 3rpx;
+  padding: 5rpx;
 }
 
 .red {
@@ -187,8 +188,8 @@ z-index: 1;
   height: 150rpx;
   width: 150rpx;
   position: fixed;
-  right: 50rpx;
-  top: 900rpx;
+  left: 50rpx;
+  bottom: 50rpx;
   z-index: 3;
 }
 /* add button */
