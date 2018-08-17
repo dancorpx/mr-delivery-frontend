@@ -33,6 +33,33 @@ Page({
     })
   },
 
+  bindComplete: function (e) {
+    console.log(1122334455, e)
+    wx.showModal({
+      title: '是否确认?',
+      content: '包裹的主人已收到包裹',
+      success: function (res) {
+        if (res.confirm) {
+              myRequest.put({
+                path: `packages/${e.currentTarget.dataset.hi}`,
+                data: {
+                  available: false,
+                  accepted: false,
+                  completed: true
+                },
+                success(res) {
+                  console.log(999999, res)
+                }
+              })
+              wx.showToast({ title: '本次快递结束!', icon: 'success', duration: 1000 })
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+  },
+
+
   onLoad: function (options) {
     let page = this
     console.log(111222, globalData.userId)
@@ -54,9 +81,7 @@ Page({
     })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
+
   onReady: function () {
   
   },
