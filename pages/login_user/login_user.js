@@ -31,7 +31,7 @@ Page({
         console.log(98989, res)
         if (res.data.statusCode != 200) {
           wx.showModal({
-            title: 'Error',
+            title: '错误',
             content:`${res.data.error}`,
             success: function (res) {
               if (res.confirm) {
@@ -52,7 +52,7 @@ Page({
         globalData.userPhoto = res.data.photo
         globalData.userAvatar = res.data.avatar
 
-        wx.showToast({ title: 'OK!', icon: 'success', duration: 1000 })
+        wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
         }
       }
     })
