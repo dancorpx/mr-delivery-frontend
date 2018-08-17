@@ -84,19 +84,11 @@ Page({
   onLoad: function (options) {
    let page = this
     console.log(111222, globalData.userId)
-    // myRequest.get({
-    //   path: `packages/avaliable?${globalData.userId}`,
-    //   success(res) {
-    //     console.log(33331111, res)
-    //     page.setData({ availablePackages: res.data.packages })
-    //     console.log
-    //   }
-    // })
     myRequest.get({
           path: `packages/available?customer_id=${globalData.userId}`,
           success(res) {
           console.log(33331111, res)
-          page.setData({ availablePackages: res.data.packages })
+          page.setData({ availablePackages: res.data.packages.reverse() })
           console.log
         }
       })
@@ -104,7 +96,7 @@ Page({
       path: `packages/accepted?customer_id=${globalData.userId}`,
         success(res) {
           console.log(33332222, res)
-          page.setData({ acceptedPackages: res.data.packages })
+          page.setData({ acceptedPackages: res.data.packages.reverse() })
           console.log
         }
       })
@@ -112,7 +104,7 @@ Page({
       path: `packages/completed?customer_id=${globalData.userId}`,
       success(res) {
         console.log(33333333, res)
-        page.setData({completedPackages: res.data.packages})
+        page.setData({completedPackages: res.data.packages.reverse()})
         console.log
       }
     })
