@@ -55,11 +55,11 @@ z-index: 1;
 
 .card-outer-border {
   margin: 10rpx;
-  border: 0.5rpx solid rgb(145, 145, 145);
+  /* border: 0.5rpx solid rgb(145, 145, 145); */
   border-radius: 3rpx;
   padding-bottom: 5rpx;
   background-color: white;
-  box-shadow: 3rpx 1px grey;
+  box-shadow: 7rpx 5rpx lightgray;
 }
 
 .row-1 {
@@ -159,12 +159,12 @@ z-index: 1;
 
 .call-button {
   position: absolute;
-  right: 30rpx;
+  right: 10rpx;
   background-color: #FF5D00;
   color: white;
   text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
   border-radius: 3rpx;
-  padding: 5rpx;
+  padding: 8rpx;
 }
 .confirm-button {
   text-align: center;
@@ -172,7 +172,7 @@ z-index: 1;
   background-color: green;
   color: white;
   margin-left: 480rpx;
-  padding: 5rpx;
+  padding: 8rpx;
 }
 .red {
   border: 1rpx solid red
