@@ -56,12 +56,17 @@ z-index: 1;
 .row-1 {
   height: 124rpx; 
   display: flex;
-  align-ites: center
+  align-ites: center;
 }
 
 .row-2 {
   height: 76rpx;
-  position: relative
+  position: relative;
+  margin-top: 30rpx;
+}
+
+.row-3 {
+  margin: 50rpx 50rpx
 }
 
 .avatar {
@@ -177,5 +182,28 @@ z-index: 1;
   position: fixed;
   left: 50rpx;
   bottom: 50rpx;
+  z-index: 2;
+}
+
+.comments {
+  margin: 20rpx 20rpx;
+  border: solid 1rpx rgba(0, 0, 0, 0.247);
+  padding: 20rpx 20rpx;
+  font-weight: lighter
+}
+
+.whole-page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 1;
   z-index: 3;
+  background-color:rgba(255, 255, 255, 0.788);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.expanded-card {
+  min-width: 98% 
 }
