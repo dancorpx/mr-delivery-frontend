@@ -161,7 +161,7 @@ z-index: 1;
   background-color: #FF5D00;
   color: white;
   text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
-  border-radius: 3rpx;
+  border-radius: 5rpx;
   padding: 8rpx;
 }
 
@@ -171,8 +171,10 @@ z-index: 1;
   background-color: red;
   color: white;
   text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4);
-  border-radius: 3rpx;
+  border-radius: 5rpx;
   padding: 8rpx;
+  width: 100rpx;
+  text-align: center;
 }
 
 .red {
