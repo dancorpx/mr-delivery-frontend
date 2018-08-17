@@ -171,9 +171,10 @@ z-index: 1;
   position: absolute;
   background-color: green;
   color: white;
-  margin-left: 480rpx;
+  margin-left: 460rpx;
   padding: 8rpx;
   border-radius: 5rpx;
+  width: 100rpx; 
 }
 .red {
   border: 1rpx solid red
