@@ -39,24 +39,12 @@ Page({
 
   bindAddDelivery: function(e) {
     let page = this
-    let currentPackageCustomer = null
-    // sets current package customer
-    myRequest.get({
-      path: `packages/${e.currentTarget.dataset.hi}`,
-      success(res) {
-        console.log(777332313123, res)
-        console.log(777332313111, res.data.customer_id)
-        currentPackageCustomer = res.data.customer_id
-        console.log(9087, currentPackageCustomer )
-      },  
-    })
-
-
+    
     if (globalData.userName === null) {
       wx.navigateTo({
         url: '/pages/login_user/login_user',
       })
-    } else if (globalData.userId ===  currentPackageCustomer ) {
+    } else if (globalData.userId ===  e.currentTarget.dataset.customer_id) {
       wx.showModal({
         title: 'Error!',
         content: "You can't add your own package!",
