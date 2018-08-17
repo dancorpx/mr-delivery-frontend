@@ -52,6 +52,11 @@ Page({
                 }
               })
               wx.showToast({ title: '本次快递结束!', icon: 'success', duration: 1000 })
+              setTimeout(function () {
+                wx.navigateTo({
+                  url: '/pages/my_deliveries/my_deliveries'
+                })
+              }, 1000)
         } else if (res.cancel) {
           console.log('用户点击取消')
         }

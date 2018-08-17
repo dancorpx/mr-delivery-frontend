@@ -4,7 +4,9 @@ const globalData = app.globalData
 const myRequest = require('../../lib/api/request')
 
 Page({
-  data: {},
+  data: {
+    address_name: "请选择宿舍楼",
+  },
 
   getUserInfo: function (e) {
     let page = this
