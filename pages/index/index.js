@@ -17,7 +17,7 @@ Page({
   },
 
   bindAddPage: function(e) {
-    if (globalData.userName === undefined) {
+    if (globalData.userName === null ) {
       wx.navigateTo({
         url: '/pages/login_user/login_user',
       })
@@ -28,9 +28,47 @@ Page({
     }
   },
 
+  // getPackageCustomer: function (package_id) {
+  //   myRequest.get({
+  //     path: `packages/${package_id}`,
+  //     success(res) {
+  //       res.data.customer.id
+  //     }
+  //   })
+  // },
+
   bindAddDelivery: function(e) {
     let page = this
-    console.log(111122223333,e)
+    let currentPackageCustomer = null
+    // sets current package customer
+    myRequest.get({
+      path: `packages/${e.currentTarget.dataset.hi}`,
+      success(res) {
+        console.log(777332313123, res)
+        console.log(777332313111, res.data.customer_id)
+        currentPackageCustomer = res.data.customer_id
+        console.log(9087, currentPackageCustomer )
+      },  
+    })
+
+
+    if (globalData.userName === null) {
+      wx.navigateTo({
+        url: '/pages/login_user/login_user',
+      })
+    } else if (globalData.userId ===  currentPackageCustomer ) {
+      wx.showModal({
+        title: 'Error!',
+        content: "You can't add your own package!",
+        success: function (res) {
+          if (res.confirm) {
+            console.log('confirm')
+          } else if (res.cancel) {
+            console.log('cancel')
+          }
+        }
+      })
+    } else {
     wx.showModal({
       title: 'Accept?',
       content: 'Once accepted you have to delivery this package, you can call the other student to organise!"',
@@ -62,6 +100,7 @@ Page({
         }
       }
     })
+    }
   },
 
   onLoad: function (options) {
