@@ -5,7 +5,8 @@
     "pages/my_deliveries/my_deliveries",
     "pages/login_user/login_user",
     "pages/post_item/post_item",
-    "pages/landing_page/landing_page"
+    "pages/landing_page/landing_page",
+    "pages/login_worker/login_worker"
   ],
   "window": {
     "backgroundTextStyle": "light",

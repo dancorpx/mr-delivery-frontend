@@ -1,0 +1,72 @@
+/* pages/login_worker/login_worker.wxss */
+.heading {
+  color: white;
+  font-weight: bold;
+  font-size: 80rpx;
+  padding-bottom: 30rpx; 
+}
+
+/* form style */
+.user-input {
+  width: 100%;
+  margin-bottom: 35rpx;
+}
+.input-height {
+  height: 20px;
+}
+.input-label {
+  font-size: 10rpx;
+}
+textarea {
+  padding: 10rpx 0;
+  font-size: 35rpx;
+  
+}
+.text-area-wrap {
+  padding: 15rpx 15rpx;
+  background-color: rgb(219, 216, 216);
+  margin-top:8px;
+  border-radius: 0px;
+  border-left: 5px solid rgb(252, 223, 156);
+}
+
+/* Buttons */
+button {
+  border-radius: 0;
+}
+.button-container {
+display: inline-flex;
+height: 120rpx;
+}
+.img-upload {
+  /* margin-right: 10rpx;
+  margin-left: 10rpx; */
+  box-shadow: 0 0 0 5rpx #9FDAF0,
+                inset 0 0 0 5rpx rgb(219, 216, 216);
+  padding: 18rpx;
+  font-weight: lighter;
+}
+.qrcode-upload {
+  box-shadow: 0 0 0 5rpx #9FDAF0,
+                inset 0 0 0 5rpx rgb(219, 216, 216);
+  padding: 18rpx;
+  font-weight: lighter;
+}
+.home-location {
+  box-shadow: 0 0 0 5rpx #9FDAF0,
+                inset 0 0 0 5rpx rgb(219, 216, 216);
+  padding: 18rpx;
+}
+/* submit button */
+.submit-button {
+  /* background-color: #FF5D00; */
+  background-color: rgba(57, 207, 57, 0.658);
+  color: white;
+  margin: 100rpx;
+  width: 420rpx;
+  margin-left: 120rpx;
+  /* box-shadow: 0 8px 6px -6px #000000 ; */
+  font-weight: bold;
+}
+/* submit button */
+/* Buttons */

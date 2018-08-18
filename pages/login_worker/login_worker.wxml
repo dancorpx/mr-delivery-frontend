@@ -1,0 +1,34 @@
+<!--pages/login_worker/login_worker.wxml-->
+<!-- heading -->
+<view class="container">
+  <view class="heading">包裹同学登录</view>
+<!-- heading -->
+
+  <!-- form-->
+  <form bindsubmit="bindSubmit">
+    <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea placeholder="姓名"  name="name" auto-height />
+      </view>
+    </view>
+    <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea style="input-size" placeholder='学生卡号' class="input-height" name="student_number" maxlength='-1' />
+      </view>
+    </view>
+     <view class="user-input">
+      <view class="text-area-wrap">
+        <textarea style="input-size" placeholder='手机号' class="input-height" name="phone_number" maxlength='-1' />
+      </view>
+    </view>
+    
+    <!-- <map id="myMap" latitude="" longditude="" show-location style="width: 100%; height: 200px;" /> -->
+   <view class="button-container"> 
+      <button bindtap="grantAuthorizeLocation" class="home-location">{{address_name}}</button>
+      <button class='img-upload'>上载照片</button>
+      <button class='qrcode-upload'>上载二维码</button>
+    </view>
+    <button class="submit-button" form-type="submit" open-type="getUserInfo" bindgetuserinfo="getUserInfo">进入</button>
+  </form>
+</view>
+<!-- form -->
