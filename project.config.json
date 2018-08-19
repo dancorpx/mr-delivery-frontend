@@ -33,7 +33,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 5,
+			"current": 6,
 			"list": [
 				{
 					"id": 0,
@@ -75,6 +75,12 @@
 					"id": -1,
 					"name": "code_confirm_pay",
 					"pathName": "pages/code_confirm_pay/code_confirm_pay",
+          "query": ""
+        },
+        {
+					"id": -1,
+          "name": "login_worker",
+					"pathName": "pages/login_worker/login_worker",
 					"query": ""
 				}
 			]
