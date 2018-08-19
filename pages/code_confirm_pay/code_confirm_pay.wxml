@@ -1,0 +1,26 @@
+<!--code entry popup  -->
+<view class="flex-display whole-page" wx:if="{{showPopup}}" bindtap="closePopup">
+  <view class="verification">
+      <view class="title">
+        To confirm delivery, enter the code given by the package owner:
+      </view>
+      <form class="form" bindsubmit="bindSubmit">
+        <view class="user-input">
+          <view class="text-area-wrap"> 
+            <textarea placeholder="验证码"  name="verification_code" auto-height />
+          </view>
+        </view>
+          <button class="complete-button" form-type="submit" >确认</button>
+       </form>
+  </view>
+</view>
+
+<!--payment qr for worker  -->
+
+<view class= "payment">
+ <view class="section-title">Pay with WeChat</view>
+  <view class="image-div">
+    <image class="image" src= "/lib/images/mock_qr.jpg"></image>  <!-- "{{globalData.userQR}}" -->
+  </view>
+</view>
+

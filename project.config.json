@@ -73,7 +73,13 @@
 				},
 				{
 					"id": -1,
-					"name": "login_worker",
+					"name": "code_confirm_pay",
+					"pathName": "pages/code_confirm_pay/code_confirm_pay",
+          "query": ""
+        },
+        {
+					"id": -1,
+          "name": "login_worker",
 					"pathName": "pages/login_worker/login_worker",
 					"query": ""
 				}
