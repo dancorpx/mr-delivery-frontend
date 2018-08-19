@@ -70,6 +70,12 @@
 					"name": "landing_page",
 					"pathName": "pages/landing_page/landing_page",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "code_confirm_pay",
+					"pathName": "pages/code_confirm_pay/code_confirm_pay",
+					"query": ""
 				}
 			]
 		}

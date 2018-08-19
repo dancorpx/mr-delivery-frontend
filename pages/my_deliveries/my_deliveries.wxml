@@ -55,7 +55,7 @@
             <image src="../../lib/images/box-solid.svg" class="large padding {{delivery.package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
           <view>
-          <view class="confirm-button" bindtap="bindComplete" data-hi="{{delivery.package.id}}">确认</view>
+          <view class="confirm-button" bindtap="bindComplete" data-hi="{{delivery.package.id}}" data-verification="{{delivery.package.verification_code}}" data-worker_qr="{{delivery.worker.static_pay_qr}}">确认</view>
           </view>
           <view class='call-button red-border' bindtap="bindPhone" data-userPhone="{{delivery.customer.phone_number}}">
             打电话

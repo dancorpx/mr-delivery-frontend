@@ -35,30 +35,16 @@ Page({
 
   bindComplete: function (e) {
     console.log(1122334455, e)
+    globalData.currentConfirmPackage = e.currentTarget.dataset.hi
+    globalData.currentConfirmVerification = e.currentTarget.dataset.verification
     wx.showModal({
       title: '是否确认?',
       content: '包裹的主人已收到包裹',
       success: function (res) {
         if (res.confirm) {
-              myRequest.put({
-                path: `packages/${e.currentTarget.dataset.hi}`,
-                data: {
-                  available: false,
-                  accepted: false,
-                  completed: true
-                },
-                success(res) {
-                  console.log(999999, res)
-                }
-              })
-              wx.showToast({ title: '本次快递结束!', icon: 'success', duration: 1000 })
-              setTimeout(function () {
-                wx.navigateTo({
-                  url: '/pages/my_deliveries/my_deliveries'
-                })
-              }, 1000)
-        } else if (res.cancel) {
-          console.log('用户点击取消')
+          wx.navigateTo({
+            url: '/pages/code_confirm_pay/code_confirm_pay',
+          })
         }
       }
     })
@@ -133,3 +119,23 @@ Page({
   
   }
 })
+
+// myRequest.put({
+//   path: `packages/${e.currentTarget.dataset.hi}`,
+//   data: {
+//     available: false,
+//     accepted: false,
+//     completed: true
+//   },
+//   success(res) {
+//     console.log(999999, res)
+//   }
+// })
+// wx.showToast({ title: '本次快递结束!', icon: 'success', duration: 1000 })
+// setTimeout(function () {
+//   wx.navigateTo({
+//     url: '/pages/my_deliveries/my_deliveries'
+//   })
+// }, 1000)
+//         } else if (res.cancel) {
+//   console.log('用户点击取消')

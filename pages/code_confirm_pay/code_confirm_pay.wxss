@@ -1,0 +1,91 @@
+.flex-display {
+  display: flex;
+  flex-direction: column
+}
+
+.whole-page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 1;
+  z-index: 3;
+  background-color:rgba(159, 218, 240, 0.788);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.section-title {
+  color: white;
+  font-weight: bolder;
+  text-align: center;
+  border-bottom: 2px solid white;
+  margin:20rpx;
+}
+
+.image-div {
+  width: 80vw;
+  height: 90vh;
+  margin: auto;
+  padding-top: 20rpx;
+}
+
+image {
+ width: 80vw;
+ height: 90vh;
+}
+
+.verification {
+  position: relative;
+  height: 60vh;
+  width: 60vw;
+  margin: 10px;
+  /* border: 0.5px solid rgb(145, 145, 145); */
+  border-radius: 3px;
+  padding-bottom: 5px;
+  background-color: white;
+  box-shadow: 7rpx 5rpx lightgray;
+
+}
+.title {
+  width: 50vw;
+  position: absolute;
+  margin: 25rpx;
+  text-align: center;
+}
+
+
+.complete-button{
+  position: absolute;
+  bottom: 5vw;
+  left: 15vw;
+  width: 30vw;
+  background-color: #FF5D00;
+  color: white;
+  text-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+  border-radius: 5px;
+  padding: 8rpx;
+}
+
+textarea{
+  width: 40vw;
+}
+
+.user-input {
+  background-color: rgb(240,240,240);
+  position: absolute;
+  top: 25vh;
+  left: 10vw;
+  padding: 10rpx;
+  font-size: 70rpx;
+  text-align: center;
+  width: 40vw;
+}
+
+.text-area-wrap {
+  width: 40vw;
+}
+
+.form{
+  width: 60vw;
+}
