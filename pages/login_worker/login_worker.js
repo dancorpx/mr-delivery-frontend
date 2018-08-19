@@ -2,6 +2,7 @@
 const app = getApp()
 const globalData = app.globalData
 const myRequest = require('../../lib/api/request')
+const AV = require('../../utils/av-weapp-min.js');
 
 Page({
     data: {
@@ -107,6 +108,26 @@ grantAuthorizeLocation: function () {
   onLoad: function (options) {
   
   },
+takePhoto: function() {
+  wx.chooseImage({
+    count: 1,
+    sizeType: ['original'],
+    sourceType: ['album', 'camera'],
+    success: function(res) {
+      var tempFilePaths = res.tempFilePaths
+      console.log(tempFilePaths)
+      let tempFilePath = res.tempFilePaths[0];
+      console.log('sending image to LeanCloud')
+      new  AV.File('file-name', {
+        blob: {
+          uri: tempFilePath,
+        },
+        }).save().then(
+          file => console.log(file.url())
+        ).catch(console.error);
+    }
+  });
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

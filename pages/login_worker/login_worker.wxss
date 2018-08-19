@@ -24,15 +24,17 @@ textarea {
 }
 .text-area-wrap {
   padding: 15rpx 15rpx;
-  background-color: rgb(219, 216, 216);
+  background-color: rgb(240, 240, 240);
   margin-top:8px;
   border-radius: 0px;
-  border-left: 5px solid rgb(252, 223, 156);
+  border-left: 5px solid #F2FD9D;
+box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
 }
 
 /* Buttons */
 button {
   border-radius: 0;
+  font-weight: lighter;
 }
 .button-container {
 display: inline-flex;
@@ -44,18 +46,17 @@ height: 120rpx;
   box-shadow: 0 0 0 5rpx #9FDAF0,
                 inset 0 0 0 5rpx rgb(219, 216, 216);
   padding: 18rpx;
-  font-weight: lighter;
 }
 .qrcode-upload {
   box-shadow: 0 0 0 5rpx #9FDAF0,
                 inset 0 0 0 5rpx rgb(219, 216, 216);
   padding: 18rpx;
-  font-weight: lighter;
 }
 .home-location {
   box-shadow: 0 0 0 5rpx #9FDAF0,
                 inset 0 0 0 5rpx rgb(219, 216, 216);
   padding: 18rpx;
+  width: 250rpx;
 }
 /* submit button */
 .submit-button {
@@ -65,7 +66,7 @@ height: 120rpx;
   margin: 100rpx;
   width: 420rpx;
   margin-left: 120rpx;
-  /* box-shadow: 0 8px 6px -6px #000000 ; */
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
   font-weight: bold;
 }
 /* submit button */
