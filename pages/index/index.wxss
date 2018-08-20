@@ -55,12 +55,12 @@ z-index: 1;
 }
 
 .card-outer-border {
-  margin: 10px;
+  margin: 20rpx;
   /* border: 0.5px solid rgb(145, 145, 145); */
   border-radius: 3px;
   padding-bottom: 5px;
   background-color: white;
-  box-shadow: 7rpx 5rpx lightgray;
+  box-shadow: 5rpx 5rpx white;
 }
 
 .row-1 {
@@ -72,7 +72,7 @@ z-index: 1;
 .row-2 {
   height: 76rpx;
   position: relative;
-  margin-top: 30rpx;
+  /* margin-top: 30rpx; */
 }
 
 .row-3 {
@@ -176,7 +176,8 @@ z-index: 1;
   right: 10rpx;
   background-color: #FF5D00;
   color: white;
-  text-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+  /* text-shadow: 2px 2px rgba(128, 128, 128, 0.4); */
+  box-shadow: 2rpx 2rpx black;
   border-radius: 5rpx;
   padding: 8rpx;
 }
