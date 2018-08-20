@@ -1,7 +1,7 @@
 /* pages/my_deliveries/my_deliveries.wxss */
 /**tabs**/
 page {
-  background-color:#F2FD9D;
+  background-color:#9FDAF0;
 }
 .tabs {
 position: fixed;
@@ -15,11 +15,11 @@ z-index: 1;
   flex: 1;
   width: 33vw;
   color: white;
-  background: #F2FD9D;
+  background: #9FDAF0;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
-  border-bottom: 1px solid #F2FD9D;
+  border-bottom: 1px solid #9FDAF0;
 }
 .tab {
   background: white;
@@ -66,7 +66,7 @@ z-index: 1;
   border-radius: 3rpx;
   padding-bottom: 5rpx;
   background-color: white;
-  box-shadow: 7rpx 5rpx lightgray;
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
 }
 
 .row-1 {
@@ -109,8 +109,8 @@ z-index: 1;
   font-size: 50rpx;
 }
 .location-name{
-  width: 300rpx;
-  height:75rpx;
+  width: 345rpx;
+  height:83rpx;
   overflow:hidden;
   text-overflow: ellipsis;
   font-size: 25rpx;
@@ -127,8 +127,12 @@ z-index: 1;
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  float: left;
+  padding-left: 14rpx;
 }
-
+.time-available {
+  font-size: 30rpx;
+}
 /* .red-border {
   border: 1px solid red
 } */
@@ -136,11 +140,14 @@ z-index: 1;
 .location-icon {
   height: 40rpx;
   width: 40rpx;
+  padding-right: 5rpx;
 }
 
 .time-icon {
   height: 40rpx;
   width: 40rpx;
+  padding-right: 5rpx;
+  padding-top: 5rpx;
 }
 
 .package-icons {
@@ -179,7 +186,7 @@ z-index: 1;
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
   padding: 8rpx;
-  box-shadow: 2rpx 2rpx black;
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
 }
 .confirm-button {
   text-align: center;
@@ -190,7 +197,7 @@ z-index: 1;
   padding: 8rpx;
   border-radius: 5rpx;
   width: 100rpx; 
-  box-shadow: 2rpx 2rpx black;
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
 }
 .red {
   border: 1rpx solid red
@@ -211,7 +218,7 @@ z-index: 1;
   position: fixed;
   opacity: 1;
   z-index: 3;
-  background-color:rgba(242,253,157, 0.788);
+  background-color:rgba(159, 218, 240, 0.788);
   display: flex;
   justify-content: space-around;
   align-items: center;
