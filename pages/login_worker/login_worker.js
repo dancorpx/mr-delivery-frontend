@@ -6,9 +6,9 @@ const AV = require('../../utils/av-weapp-min.js');
 
 Page({
     data: {
-      name: "姓名",
-      student_number: "学生卡号",
-      phone_number: "手机号",
+      // name: "姓名",
+      // student_number: "学生卡号",
+      // phone_number: "手机号",
       address_name: "请选择宿舍楼",
       
     },
