@@ -1,4 +1,7 @@
 /* pages/login_user/login_user.wxss */
+page {
+  background-color: #9FDAF0;
+}
 .heading {
   color: white;
   font-weight: bold;
