@@ -116,7 +116,7 @@ takePhoto: function() {
     sourceType: ['album', 'camera'],
     success: function(res) {
       var tempFilePaths = res.tempFilePaths
-      console.log(tempFilePaths)
+      console.log(2323, tempFilePaths)
       let tempFilePath = res.tempFilePaths[0];
       console.log('sending image to LeanCloud')
       new  AV.File('file-name', {
@@ -124,7 +124,7 @@ takePhoto: function() {
           uri: tempFilePath,
         },
         }).save().then(
-          file => console.log(file.url())
+          file => console.log(3222, file.url())
         ).catch(console.error);
     }
   });

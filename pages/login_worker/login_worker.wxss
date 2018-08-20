@@ -9,7 +9,7 @@
 /* form style */
 .user-input {
   width: 100%;
-  margin-bottom: 35rpx;
+  margin-bottom: 20rpx;
 }
 .input-height {
   height: 20px;
@@ -23,43 +23,46 @@ textarea {
 }
 .text-area-wrap {
   padding: 15rpx 15rpx;
-  background-color: rgb(219, 216, 216);
-  margin-top:8px;
-  border-radius: 0px;
-  border-left: 5px solid #F2FD9D;
-box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+  background-color: rgb(230, 228, 228);
+  margin-top:10rpx;
+  border-radius: 0rpx;
+  border-left: 8rpx solid #F2FD9D;
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
 }
 
 /* Buttons */
 button {
   border-radius: 0;
   font-weight: lighter;
-}
-.button-container {
-display: inline-flex;
-height: 120rpx;
-}
-.img-upload {
-  /* margin-right: 10rpx;
-  margin-left: 10rpx; */
-  box-shadow: 0 0 0 5rpx #9FDAF0,
-                inset 0 0 0 5rpx rgb(219, 216, 216);
-  padding: 18rpx;
-}
-.qrcode-upload {
-  box-shadow: 0 0 0 5rpx #9FDAF0,
-                inset 0 0 0 5rpx rgb(219, 216, 216);
-  padding: 18rpx;
+  background-color: rgb(230, 228, 228);
+  color: grey;
 }
 .home-location {
-  box-shadow: 0 0 0 5rpx #9FDAF0,
-                inset 0 0 0 5rpx rgb(219, 216, 216);
-  padding: 18rpx;
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+  margin-bottom: 40rpx;
+  border-left: 8rpx solid #F2FD9D;
+  text-align: left;
+}
+.button-container {
+  display: inline-flex;
+  /* height: 120rpx; */
+  width: 643rpx;
+}
+.img-upload {
+  /* padding: 15rpx; */
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+  border-left: 8rpx solid #F2FD9D;
   width: 250rpx;
 }
+.qrcode-upload {
+  width: 250rpx;
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+  border-left: 8rpx solid #F2FD9D;
+  right: 10rpx;
+}
+
 /* submit button */
 .submit-button {
-  /* background-color: #FF5D00; */
   background-color: rgba(57, 207, 57, 0.658);
   color: white;
   margin: 100rpx;
