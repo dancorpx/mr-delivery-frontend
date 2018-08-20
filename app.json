@@ -6,7 +6,7 @@
     "pages/login_user/login_user",
     "pages/post_item/post_item",
     "pages/landing_page/landing_page",
-    "pages/code_confirm_pay/code_confirm_pay"
+    "pages/code_confirm_pay/code_confirm_pay",
     "pages/login_worker/login_worker"
   ],
   "window": {

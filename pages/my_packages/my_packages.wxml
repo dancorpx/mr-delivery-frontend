@@ -1,4 +1,70 @@
 <!--pages/my_packages/my_packages.wxml-->
+
+<!-- The expanded card -->
+
+<view class="flex-display whole-page" wx:if="{{showPopup}}" bindtap="closePopup">
+    <view class="expanded-card">
+      <view class="card-outer-border">
+        <view class='row-1'>
+          <view class='avatar red-border'>
+            <image class="avatar-img" src="{{avatar}}" ></image>
+          </view>
+          <view class='details red-border'>
+            <view class='location red-border'>
+              <view class=''>
+               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon' bindtap="openLocation"></image>
+              </view>            
+              <view class='location-name red-border'>
+                {{delivery_location_name}}
+              </view>
+            </view>
+            <view class='time red-border'>
+              <view class='time-icon'>
+                <image src="../../lib/images/clock-regular.svg" class='location-icon'></image>
+              </view>
+              <view class='time-available'>
+                {{delivery_time_start}}-{{delivery_time_end}}
+              </view>
+            </view>
+          </view>
+          <view class='price red-border'>
+            {{price}}¥
+          </view>
+        </view>
+        <view class='row-2'>
+          <view class='package-icons red-border'>
+            <image src="../../lib/images/box-solid.svg" class="small padding {{size == 'Small' ? '' : 'fade' }}"></image>
+            <image src="../../lib/images/box-solid.svg" class="medium padding {{size == 'Medium' ? '' : 'fade' }}"></image>
+            <image src="../../lib/images/box-solid.svg" class="large padding {{size == 'Large' ? '' : 'fade' }}"></image>
+          </view>
+        </view>
+        <view class='row-3'>
+          <view>
+            名字：{{name}}
+          </view>
+          <view>
+            手机号：{{phone_number}}
+          </view>
+          <view>
+            快递号：{{kuai_di_code}}
+          </view>
+          <view>
+            备注：
+          </view>
+          <view class='comments'>
+            {{comment == '' ? '' : comment}}
+          </view>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+
+
+
+
+
 <!-- tabs -->
 <view class='tabs'>
   <view class="tab" bindtap="goIndex">
@@ -26,7 +92,7 @@
 <view class="flex-display">
   <block wx:for="{{availablePackages}}" wx:for-item="package" wx:key="packages">
     <view class="card">
-      <view class="card-outer-border" bindtap='expandCard'>
+      <view class="card-outer-border" bindtap='expandCard' data-delivery_location_name="{{package.delivery_location_name}}" data-delivery_time_start="{{package.delivery_time_start}}" data-delivery_time_end="{{package.delivery_time_end}}" data-price="{{package.price}}" data-size="{{package.size}}" data-avatar="{{package.customer.avatar}}" data-name="{{package.customer.name}}" data-phone_number="{{package.customer.phone_number}}" data-kuai_di_code="{{package.kuai_di_code}}" data-comment="{{package.comment}}">
         <view class='row-1'>
           <view class='avatar red-border'>
             <image class="avatar-img" src="{{package.customer.avatar}}"></image>
@@ -75,7 +141,7 @@
 <view class="flex-display">
   <block wx:for="{{acceptedPackages}}" wx:for-item="package" wx:key="packages">
     <view class="card">
-      <view class="card-outer-border" bindtap='expandCard'>
+      <view class="card-outer-border" bindtap='expandCard' data-delivery_location_name="{{package.delivery_location_name}}" data-delivery_time_start="{{package.delivery_time_start}}" data-delivery_time_end="{{package.delivery_time_end}}" data-price="{{package.price}}" data-size="{{package.size}}" data-avatar="{{package.customer.avatar}}" data-name="{{package.customer.name}}" data-phone_number="{{package.customer.phone_number}}" data-kuai_di_code="{{package.kuai_di_code}}" data-comment="{{package.comment}}">
         <view class='row-1'>
           <view class='avatar red-border'>
             <image class="avatar-img" src="{{package.customer.avatar}}" ></image>
@@ -124,7 +190,7 @@
 <view class="flex-display">
   <block wx:for="{{completedPackages}}" wx:for-item="package" wx:key="packages">
     <view class="card">
-      <view class="card-outer-border" bindtap='expandCard'>
+      <view class="card-outer-border" bindtap='expandCard' data-delivery_location_name="{{package.delivery_location_name}}" data-delivery_time_start="{{package.delivery_time_start}}" data-delivery_time_end="{{package.delivery_time_end}}" data-price="{{package.price}}" data-size="{{package.size}}" data-avatar="{{package.customer.avatar}}" data-name="{{package.customer.name}}" data-phone_number="{{package.customer.phone_number}}" data-kuai_di_code="{{package.kuai_di_code}}" data-comment="{{package.comment}}">
         <view class='row-1'>
           <view class='avatar red-border'>
             <image class="avatar-img" src="{{package.customer.avatar}}" ></image>
@@ -165,3 +231,7 @@
     </view>
   </block>
 </view>
+
+
+
+
