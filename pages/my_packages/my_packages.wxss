@@ -133,6 +133,7 @@ z-index: 1;
 .location-icon {
   height: 40rpx;
   width: 40rpx;
+  margin-bottom: 15rpx;
 }
 
 .time-icon {

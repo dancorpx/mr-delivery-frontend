@@ -140,7 +140,7 @@ z-index: 1;
 .location-icon {
   height: 40rpx;
   width: 40rpx;
-  padding-right: 5rpx;
+  margin-bottom: 15rpx;
 }
 
 .time-icon {
