@@ -1,4 +1,11 @@
 //app.js
+const AV =  require('./utils/av-weapp-min.js')
+const config = require('./key.js')
+AV.init({
+  appId: config.appId,
+  appKey: config.appSecret,
+});
+
 App({
   onLaunch: function () {
     console.log(444, this.globalData)
