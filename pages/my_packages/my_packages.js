@@ -10,6 +10,7 @@ Page({
    */
   data: {
     showPopup: false,
+    claimed: false,
   },
   goMyDeliveries: function () {
     wx.reLaunch({
@@ -114,7 +115,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+    
   },
 
   /**
@@ -171,10 +172,14 @@ Page({
     this.setData({ phone_number: e.currentTarget.dataset.phone_number })
     this.setData({ kuai_di_code: e.currentTarget.dataset.kuai_di_code })
     this.setData({ comment: e.currentTarget.dataset.comment })
+    this.setData({ delivery_guy_avatar: e.currentTarget.dataset.delivery_guy_avatar})
+    this.setData({ claimed: e.currentTarget.dataset.claimed})
     this.setData({ showPopup: true })
+    console.log(333333, this.data)
   },
 
   closePopup: function (e) {
     this.setData({ showPopup: false })
+    this.setData({ claimed: false})
   }
 })
