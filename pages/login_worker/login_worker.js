@@ -6,6 +6,9 @@ const AV = require('../../utils/av-weapp-min.js');
 
 Page({
     data: {
+      name: "姓名",
+      student_number: "学生卡号",
+      phone_number: "手机号",
       address_name: "请选择宿舍楼",
       
     },
@@ -98,16 +101,17 @@ grantAuthorizeLocation: function () {
     }
   })
 },
-  /**
-   * 页面的初始数据
-   */
 
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-  
+    this.setData({
+      name: globalData.userName,
+      phone_number: globalData.userPhoneNumber,
+      student_number: globalData.userStudentNumber,
+      address_name: globalData.userAddressName,
+      address_lat: globalData.userAddressLat,
+      address_lng: globalData.userAddressLng,
+    })
+    console.log(112233, this.data)
   },
 takePhoto: function() {
   wx.chooseImage({

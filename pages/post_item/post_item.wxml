@@ -49,7 +49,7 @@
         </view>
       </view>
 
-    <button bindtap="grantAuthorizeLocation">{{delivery_location_name}}
+    <button bindtap="grantAuthorizeLocation">{{address_name}}
 
     </button>
 
