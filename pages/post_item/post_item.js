@@ -6,6 +6,8 @@ const myRequest = require('../../lib/api/request')
 Page({
 
   data: {
+    address_name: "请选择宿舍楼",
+    
     items: [
       { name: 'Small', value: '小', checked: 'true' },
       { name: 'Medium', value: '中'},

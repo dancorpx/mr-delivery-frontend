@@ -1,4 +1,7 @@
 /**index.wxss**/
+page {
+  background-color:#9FDAF0;
+}
 .tabs {
 position: fixed;
 display: flex;
@@ -44,10 +47,10 @@ z-index: 1;
 }
 
 .section-title {
-  color: white;
-  font-weight: bolder;
+  color: black;
+  font-weight: lighter;
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
   margin:20rpx;
 }
 
@@ -174,7 +177,7 @@ z-index: 1;
   background-color: #FF5D00;
   color: white;
   text-shadow: 2px 2px rgba(128, 128, 128, 0.4);
-  border-radius: 5px;
+  border-radius: 5rpx;
   padding: 8rpx;
 }
 

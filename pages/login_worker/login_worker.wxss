@@ -1,4 +1,8 @@
 /* pages/login_worker/login_worker.wxss */
+page {
+  background-color:#9FDAF0;
+}
+
 .heading {
   color: white;
   font-weight: bold;
@@ -27,7 +31,7 @@ textarea {
   margin-top:10rpx;
   border-radius: 0rpx;
   border-left: 8rpx solid #F2FD9D;
-  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000;
 }
 
 /* Buttons */

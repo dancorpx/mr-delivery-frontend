@@ -1,5 +1,8 @@
 /* pages/my_packages/my_packages.wxss */
 /* tabs */
+page {
+  background-color:#FF6F55;
+}
 .tabs {
 position: fixed;
 display: flex;
@@ -13,11 +16,11 @@ z-index: 1;
   flex: 1;
   width: 33vw;
   color: white;
-  background: #9FDAF0;
+  background: #FF6F55;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
-  border-bottom: 1px solid #9FDAF0;
+  border-bottom: 1px solid #FF6F55;
 }
 .tab {
   background: white;
@@ -40,10 +43,10 @@ z-index: 1;
 
 /* section titles */
 .section-title {
-  color: white;
-  font-weight: bolder;
+  color: black;
+  font-weight: lighter;
   text-align: center;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid black;
   margin:20rpx;
 }
 /* section titles */
@@ -215,7 +218,7 @@ z-index: 1;
   position: fixed;
   opacity: 1;
   z-index: 3;
-  background-color:rgba(159, 218, 240, 0.788);
+  background-color:rgba(255,111,85, 0.788); 
   display: flex;
   justify-content: space-around;
   align-items: center;
