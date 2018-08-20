@@ -33,8 +33,8 @@ Page({
                
     }else{
       wx.showModal({
-        title: 'error!',
-        content: 'this verification code is incorrect',
+        title: '错误!',
+        content: '验证码有误',
         success: function (res) {}
       })
     }

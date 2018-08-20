@@ -2,7 +2,7 @@
 <view class="flex-display whole-page" wx:if="{{showPopup}}" bindtap="closePopup">
   <view class="verification">
       <view class="title">
-        To confirm delivery, enter the code given by the package owner:
+        请输入验证码
       </view>
       <form class="form" bindsubmit="bindSubmit">
         <view class="user-input">
@@ -18,7 +18,7 @@
 <!--payment qr for worker  -->
 
 <view class= "payment">
- <view class="section-title">Pay with WeChat</view>
+ <view class="section-title">微信支付</view>
   <view class="image-div">
     <image class="image" src="{{qr_code}}"></image>  <!-- "{{globalData.userQR}}" -->
   </view>

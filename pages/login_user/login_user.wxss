@@ -52,23 +52,35 @@ textarea {
 }
 .text-area-wrap {
   padding: 15rpx 15rpx;
-  background-color: rgb(219, 216, 216);
+  background-color: rgb(230, 228, 228);
   margin-top:8px;
   border-radius: 0px;
-  border-left: 5px solid rgb(252, 223, 156);
+  border-left: 5px solid #F2FD9D;
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
 }
 
 /* Button */
 .submit-button {
   /* background-color: #FF5D00; */
-  background-color: green;
+  background-color: rgba(57, 207, 57, 0.658);
   color: white;
-  margin: 40px;
-  width: 200px;
+  margin: 100rpx;
+  width: 420rpx;
   margin-left: 60px;
-  /* box-shadow: 0 8px 6px -6px #000000 ; */
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
   font-weight: bold;
 }
 button {
   border-radius: 0;
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+
+}
+.home-location {
+  box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
+  margin-bottom: 40rpx;
+  border-left: 8rpx solid #F2FD9D;
+  font-weight: lighter;
+  background-color: rgb(230, 228, 228);
+  color: grey;
+  text-align: left;
 }
