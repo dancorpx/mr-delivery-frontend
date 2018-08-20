@@ -20,7 +20,7 @@ Page({
   },
 
   bindAddPage: function(e) {
-    if (globalData.userName === null ) {
+    if (globalData.userPhoneNumber === null ) {
       wx.navigateTo({
         url: '/pages/login_user/login_user',
       })
@@ -45,9 +45,9 @@ Page({
   bindAddDelivery: function(e) {
     let page = this
     
-    if (globalData.userName === null) {
+    if (globalData.userPhoto === null) {
       wx.navigateTo({
-        url: '/pages/login_user/login_user',
+        url: '/pages/login_worker/login_worker',
       })
     } else if (globalData.userId ===  e.currentTarget.dataset.customer_id) {
       wx.showModal({
