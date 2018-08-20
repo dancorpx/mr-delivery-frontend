@@ -66,7 +66,7 @@ z-index: 1;
   border-radius: 3rpx;
   padding-bottom: 5rpx;
   background-color: white;
-  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
 }
 
 .row-1 {
@@ -113,7 +113,7 @@ z-index: 1;
   height:83rpx;
   overflow:hidden;
   text-overflow: ellipsis;
-  font-size: 25rpx;
+  font-size: 30rpx;
 }
 .location {
   display: flex;
@@ -186,7 +186,7 @@ z-index: 1;
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
   padding: 8rpx;
-  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
 }
 .confirm-button {
   text-align: center;
@@ -197,7 +197,7 @@ z-index: 1;
   padding: 8rpx;
   border-radius: 5rpx;
   width: 100rpx; 
-  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
 }
 .red {
   border: 1rpx solid red
