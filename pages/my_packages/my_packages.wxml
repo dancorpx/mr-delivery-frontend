@@ -68,7 +68,7 @@
 <!-- tabs -->
 <view class='tabs'>
   <view class="tab" bindtap="goIndex">
-    <view class="index">全都</view>
+    <view class="index">全部</view>
   </view>
   <view class="tab active">
     <view class="tabHead">我的包裹</view>
