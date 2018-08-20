@@ -9,7 +9,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-   
+    showPopup: false,
   },
   goMyDeliveries: function () {
     wx.reLaunch({
@@ -157,5 +157,24 @@ Page({
    */
   onShareAppMessage: function () {
   
+  },
+
+  expandCard: function (e) {
+    console.log(565656, e)
+    this.setData({ delivery_location_name: e.currentTarget.dataset.delivery_location_name })
+    this.setData({ delivery_time_start: e.currentTarget.dataset.delivery_time_start })
+    this.setData({ delivery_time_end: e.currentTarget.dataset.delivery_time_end })
+    this.setData({ price: e.currentTarget.dataset.price })
+    this.setData({ size: e.currentTarget.dataset.size })
+    this.setData({ avatar: e.currentTarget.dataset.avatar })
+    this.setData({ name: e.currentTarget.dataset.name })
+    this.setData({ phone_number: e.currentTarget.dataset.phone_number })
+    this.setData({ kuai_di_code: e.currentTarget.dataset.kuai_di_code })
+    this.setData({ comment: e.currentTarget.dataset.comment })
+    this.setData({ showPopup: true })
+  },
+
+  closePopup: function (e) {
+    this.setData({ showPopup: false })
   }
 })
