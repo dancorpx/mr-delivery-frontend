@@ -8,6 +8,3 @@
   padding: 100rpx 0;
   box-sizing: border-box;
 }
-page {
-  background-color:#9FDAF0;
-}
