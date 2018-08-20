@@ -47,7 +47,7 @@ Page({
     
     if (globalData.userPhoto === null) {
       wx.navigateTo({
-        url: '/pages/login_worker/login_worker',
+        url: `/pages/login_worker/login_worker?id=${e.currentTarget.dataset.hi}`,
       })
     } else if (globalData.userId ===  e.currentTarget.dataset.customer_id) {
       wx.showModal({
