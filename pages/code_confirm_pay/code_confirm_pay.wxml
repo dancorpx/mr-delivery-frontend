@@ -20,7 +20,7 @@
 <view class= "payment">
  <view class="section-title">微信支付</view>
   <view class="image-div">
-    <image class="image" src= "/lib/images/mock_qr.jpg"></image>  <!-- "{{globalData.userQR}}" -->
+    <image class="image" src="{{qr_code}}"></image>  <!-- "{{globalData.userQR}}" -->
   </view>
 </view>
 

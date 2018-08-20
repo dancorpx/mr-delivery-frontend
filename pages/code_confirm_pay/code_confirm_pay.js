@@ -38,5 +38,11 @@ Page({
         success: function (res) {}
       })
     }
+  },
+
+  onLoad: function() {
+    this.setData({
+      qr_code: globalData.userQR
+    })
   }
 })

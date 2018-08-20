@@ -16,7 +16,7 @@ Page({
     getUserInfo: function (e) {
     let page = this
     console.log(1111, e)
-    globalData.userInfo = e.detail.userInfo
+    globalData.userInfo = e.detail.userInfo 
     page.setData({
       avatar: e.detail.userInfo.avatarUrl
     })
@@ -32,6 +32,8 @@ Page({
         address_name: page.data.address_name,
         address_lat: page.data.address_lat,
         address_lng: page.data.address_lng,
+        photo: page.data.photo,
+        static_pay_qr: page.data.static_pay_qr,
         avatar: page.data.avatar
       },
       success(res) {
@@ -59,16 +61,28 @@ Page({
           globalData.userPhoto = res.data.photo
           globalData.userAvatar = res.data.avatar
 
+          myRequest.put({
+            path: `packages/${page.data.currentPackage}`,
+            data: {
+              available: false,
+              accepted: true,
+            },
+            success(res) {
+              console.log(999999, res)
+            }
+          })
+
           wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
+          
         }
+        setTimeout(function () {
+          wx.navigateTo({
+            url: '/pages/my_deliveries/my_deliveries'
+          })
+        }, 1000)
       }
     })
-    setTimeout(function() {
-      wx.navigateBack({
-        // url: '/pages/index/index'
-        delta: 1
-      })
-    }, 1000)
+   
   },
 bindSubmit: function (e) {
   let page = this
@@ -102,8 +116,60 @@ grantAuthorizeLocation: function () {
   })
 },
 
+takePhoto1: function () {
+  let page = this
+  wx.chooseImage({
+    count: 1,
+    sizeType: ['original'],
+    sourceType: ['album', 'camera'],
+    success: function (res) {
+      var tempFilePaths = res.tempFilePaths
+      console.log(2323, tempFilePaths)
+      let tempFilePath = res.tempFilePaths[0];
+      console.log('sending image to LeanCloud')
+      new AV.File('file-name', {
+        blob: {
+          uri: tempFilePath,
+        },
+      }).save().then( function(file) {
+            console.log(file.url()) 
+            page.setData({ photo: file.url() })
+            console.log(222, page.data.photo)
+        
+      }).catch(console.error);
+    }
+  });
+},
+
+takePhoto2: function () {
+  let page = this
+  wx.chooseImage({
+    count: 1,
+    sizeType: ['original'],
+    sourceType: ['album', 'camera'],
+    success: function (res) {
+      var tempFilePaths = res.tempFilePaths
+      console.log(tempFilePaths)
+      let tempFilePath = res.tempFilePaths[0];
+      console.log('sending image to LeanCloud')
+      new AV.File('file-name', {
+        blob: {
+          uri: tempFilePath,
+        },
+      }).save().then(function (file) {
+        console.log(file.url())
+        page.setData({ static_pay_qr: file.url() })
+        console.log(222, page.data.static_pay_qr)
+
+      }).catch(console.error);
+    }
+  });
+},
+
   onLoad: function (options) {
+    console.log(555,options)
     this.setData({
+      currentPackage: options.id,
       name: globalData.userName,
       phone_number: globalData.userPhoneNumber,
       student_number: globalData.userStudentNumber,
@@ -113,26 +179,9 @@ grantAuthorizeLocation: function () {
     })
     console.log(112233, this.data)
   },
-takePhoto: function() {
-  wx.chooseImage({
-    count: 1,
-    sizeType: ['original'],
-    sourceType: ['album', 'camera'],
-    success: function(res) {
-      var tempFilePaths = res.tempFilePaths
-      console.log(2323, tempFilePaths)
-      let tempFilePath = res.tempFilePaths[0];
-      console.log('sending image to LeanCloud')
-      new  AV.File('file-name', {
-        blob: {
-          uri: tempFilePath,
-        },
-        }).save().then(
-          file => console.log(3222, file.url())
-        ).catch(console.error);
-    }
-  });
-},
+
+
+
 
   /**
    * 生命周期函数--监听页面初次渲染完成
