@@ -26,7 +26,7 @@
    <view class="button-container"> 
       <button bindtap="grantAuthorizeLocation" class="home-location">{{address_name}}</button>
       <button bindtap="takePhoto" class='img-upload'>上载照片</button>
-      <button bindtap="uploadQR" class='qrcode-upload'>上载二维码</button>
+      <button bindtap="takePhoto" class='qrcode-upload'>上载二维码</button>
     </view>
     <button class="submit-button" form-type="submit" open-type="getUserInfo" bindgetuserinfo="getUserInfo">进入</button>
   </form>

@@ -7,6 +7,7 @@ const AV = require('../../utils/av-weapp-min.js');
 Page({
     data: {
       address_name: "请选择宿舍楼",
+      
     },
 
     getUserInfo: function (e) {
