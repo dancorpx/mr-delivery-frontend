@@ -160,7 +160,6 @@ takePhoto2: function () {
         console.log(file.url())
         page.setData({ static_pay_qr: file.url() })
         console.log(222, page.data.static_pay_qr)
-
       }).catch(console.error);
     }
   });
