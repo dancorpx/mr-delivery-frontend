@@ -1,6 +1,6 @@
 /* pages/login_worker/login_worker.wxss */
 page {
-  background-color:#9FDAF0;
+  background-color: #9FDAF0;
 }
 
 .heading {
