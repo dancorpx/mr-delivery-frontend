@@ -67,6 +67,7 @@ z-index: 1;
   padding: 5rpx;
   background-color: white;
   box-shadow: 2rpx 2rpx 5rpx rgba(0, 0, 0, 0.5);
+
 }
 
 .row-1 {
@@ -141,7 +142,7 @@ z-index: 1;
   height:75rpx;
   overflow:hidden;
   text-overflow: ellipsis;
-  font-size: 25rpx;
+  font-size: 30rpx;
 }
 
 .location-icon {
@@ -190,7 +191,7 @@ z-index: 1;
   background-color: #FF5D00;
   color: white;
   /* text-shadow: 2px 2px rgba(128, 128, 128, 0.4); */
-  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
   border-radius: 5rpx;
   padding: 8rpx;
   font-size: 40rpx;

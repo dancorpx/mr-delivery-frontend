@@ -8,7 +8,7 @@ Page({
   },
   data: {
     showPopup: false,
-
+    shouldNotPopup: false,
   },
     goMyDeliveries: function() {
       wx.reLaunch({
@@ -46,7 +46,7 @@ Page({
 
   bindAddDelivery: function(e) {
     let page = this
-    
+    this.setData({ shouldNotPopup : true})
     if (globalData.userPhoto === null) {
       wx.navigateTo({
         url: `/pages/login_worker/login_worker?id=${e.currentTarget.dataset.hi}`,
@@ -174,6 +174,7 @@ Page({
   },
 
   expandCard: function (e) {
+    if(this.data.shouldNotPopup == false) {
     console.log(565656, e)
     this.setData({ delivery_location_name: e.currentTarget.dataset.delivery_location_name })
     this.setData({ delivery_time_start: e.currentTarget.dataset.delivery_time_start })
@@ -186,6 +187,8 @@ Page({
     this.setData({ kuai_di_code: e.currentTarget.dataset.kuai_di_code })
     this.setData({ comment: e.currentTarget.dataset.comment })
     this.setData({showPopup:true})
+    }
+    this.setData({ shouldNotPopup: false })
   },
 
   closePopup: function (e) {
