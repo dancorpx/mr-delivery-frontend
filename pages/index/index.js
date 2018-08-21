@@ -3,11 +3,13 @@ const globalData = app.globalData
 const myRequest = require('../../lib/api/request')
 
 Page({
+  onPullDownRefresh: function () {
+    wx.startPullDownRefresh()
+  },
   data: {
     showPopup: false,
 
   },
-
     goMyDeliveries: function() {
       wx.reLaunch({
        url: '/pages/my_deliveries/my_deliveries'

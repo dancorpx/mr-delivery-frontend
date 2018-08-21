@@ -2,6 +2,7 @@
 /**tabs**/
 page {
   background-color:#9FDAF0;
+  /* background-color: white; */
 }
 .tabs {
 position: fixed;
@@ -20,6 +21,7 @@ z-index: 1;
   text-align: center;
   padding-top: 10px;
   border-bottom: 1px solid #9FDAF0;
+  font-size: 40rpx;
 }
 .tab {
   background: white;
@@ -31,12 +33,14 @@ z-index: 1;
   width: 33vw;
   text-align: center;
   padding-top: 10px;
+  font-size: 40rpx;
 }
 .myPackages {
   flex: 1;
   width: 34vw;
   text-align: center;
   padding-top: 10px;
+  font-size: 40rpx;
 }
 
 .section-title {
@@ -45,14 +49,16 @@ z-index: 1;
   text-align: center;
   border-bottom: 2px solid black;
   margin:20rpx;
+  font-size: 40rpx;
 }
-
+/* 
 .myDeliveries {
   flex: 1;
   width: 33vw;
   text-align: center;
   padding-top: 10px;
-}
+  font-size: 40rpx;
+} */
 /* tabs */
 
 .flex-display {
@@ -65,8 +71,9 @@ z-index: 1;
   /* border: 0.5rpx solid rgb(145, 145, 145); */
   border-radius: 3rpx;
   padding-bottom: 5rpx;
+  padding: 5rpx;
   background-color: white;
-  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  box-shadow: 2rpx 2rpx 5rpx rgba(0, 0, 0, 0.5);
 }
 
 .row-1 {
@@ -76,11 +83,14 @@ z-index: 1;
 }
 
 .row-2 {
-  height: 76rpx;
+  height: 85rpx;
   position: relative;
   flex: space-evenly;
 }
 
+.row-3 {
+  margin: 50rpx 50rpx
+}
 
 .avatar {
   /* justify-content: space-around */
@@ -92,28 +102,31 @@ z-index: 1;
   width: 100%;
   height:100%;
   border-radius: 50%;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
 }
 
 .details {
-  width: 50%;
-  padding: 5rpx
+  width: 60%;
+  padding: 5
 }
 
 .price {
-  width: 32%;
+  width: 22%;
   padding: 5rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 50rpx;
+  font-size: 40rpx;
 }
 .location-name{
   width: 345rpx;
-  height:83rpx;
+  height: 60rpx;
   overflow:hidden;
   text-overflow: ellipsis;
   font-size: 25rpx;
+  padding-top: 5rpx;
 }
 .location {
   display: flex;
@@ -140,7 +153,7 @@ z-index: 1;
 .location-icon {
   height: 40rpx;
   width: 40rpx;
-  margin-bottom: 15rpx;
+  margin-bottom: 0rpx;
 }
 
 .time-icon {
@@ -180,24 +193,26 @@ z-index: 1;
 
 .call-button {
   position: absolute;
-  right: 10rpx;
+  right: 20rpx;
   background-color: #FF5D00;
   color: white;
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
   padding: 8rpx;
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  font-size: 40rpx;
 }
 .confirm-button {
   text-align: center;
   position: absolute;
   background-color: rgba(57, 207, 57, 0.658);
   color: white;
-  margin-left: 460rpx;
+  margin-left: 430rpx;
   padding: 8rpx;
   border-radius: 5rpx;
   width: 100rpx; 
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  font-size: 40rpx;
 }
 .red {
   border: 1rpx solid red
