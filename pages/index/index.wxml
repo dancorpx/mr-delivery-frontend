@@ -39,13 +39,13 @@
         </view>
         <view class='row-3'>
           <view>
-            名字：{{name}}
+            名字：######
           </view>
           <view>
-            手机号：{{phone_number}}
+            手机号：######
           </view>
           <view>
-            快递号：{{kuai_di_code}}
+            快递号：######
           </view>
           <view>
             备注：
