@@ -6,8 +6,10 @@ const myRequest = require('../../lib/api/request')
 Page({
 
   data: {
-    address_name: "请选择宿舍楼",
-    
+    delivery_location_name: "请选择宿舍楼",
+    name: "姓名",
+    phone_number: "手机号",
+
     items: [
       { name: 'Small', value: '小', checked: 'true' },
       { name: 'Medium', value: '中'},
@@ -29,6 +31,7 @@ Page({
       time1: e.detail.value
     })
   },
+
   bindEndTimeChange: function (e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
@@ -92,7 +95,7 @@ Page({
     })
     setTimeout(function () {
       wx.reLaunch({
-        url: '/pages/index/index'   
+        url: '/pages/my_packages/my_packages'   
       })
     }, 1000)
   },
