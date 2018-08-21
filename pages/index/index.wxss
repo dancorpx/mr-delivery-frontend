@@ -1,6 +1,7 @@
 /**index.wxss**/
 page {
   background-color:#9FDAF0;
+  /* background-color: white; */
 }
 .tabs {
 position: fixed;
@@ -19,6 +20,7 @@ z-index: 1;
   text-align: center;
   padding-top: 10px;
   border-bottom: 1px solid #9FDAF0;
+  font-size: 40rpx;
 }
 
 .tab {
@@ -32,6 +34,7 @@ z-index: 1;
   width: 33vw;
   text-align: center;
   padding-top: 10px;
+  font-size: 40rpx;
 }
 
 .myPackages {
@@ -39,6 +42,7 @@ z-index: 1;
   width: 34vw;
   text-align: center;
   padding-top: 10px;
+  font-size: 40rpx;
 }
 
 .flex-display {
@@ -52,15 +56,18 @@ z-index: 1;
   text-align: center;
   border-bottom: 2px solid black;
   margin:20rpx;
+  font-size: 40rpx;
 }
 
 .card-outer-border {
   margin: 20rpx;
   /* border: 0.5px solid rgb(145, 145, 145); */
   border-radius: 3px;
-  padding-bottom: 5px;
+  padding-bottom: 5rpx;
+  padding: 5rpx;
   background-color: white;
-  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
+  box-shadow: 2rpx 2rpx 5rpx rgba(0, 0, 0, 0.5);
+
 }
 
 .row-1 {
@@ -70,7 +77,7 @@ z-index: 1;
 }
 
 .row-2 {
-  height: 76rpx;
+  height: 85rpx;
   position: relative;
   /* margin-top: 30rpx; */
 }
@@ -89,6 +96,8 @@ z-index: 1;
   width: 100%;
   height:100%;
   border-radius: 50%;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
 }
 
 .details {
@@ -103,7 +112,7 @@ z-index: 1;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 50rpx;
+  font-size: 40rpx;
 }
 
 .location {
@@ -178,13 +187,15 @@ z-index: 1;
 
 .expand-button {
   position: absolute;
-  right: 10rpx;
+  right: 20rpx;
   background-color: #FF5D00;
   color: white;
   /* text-shadow: 2px 2px rgba(128, 128, 128, 0.4); */
   box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
   border-radius: 5rpx;
   padding: 8rpx;
+  font-size: 40rpx;
+
 }
 
 .red {

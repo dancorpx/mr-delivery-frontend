@@ -2,6 +2,7 @@
 /* tabs */
 page {
   background-color:#9FDAF0;
+  /* background-color: white; */
 }
 .tabs {
 position: fixed;
@@ -21,6 +22,7 @@ z-index: 1;
   text-align: center;
   padding-top: 10px;
   border-bottom: 1px solid #9FDAF0;
+  font-size: 40rpx;
 }
 .tab {
   background: white;
@@ -32,12 +34,14 @@ z-index: 1;
   width: 33vw;
   text-align: center;
   padding-top: 10px;
+  font-size: 40rpx;
 }
 .index {
   flex: 1;
   width: 34vw;
   text-align: center;
   padding-top: 10px;
+  font-size: 40rpx;
 }
 /* tabs */
 
@@ -48,6 +52,7 @@ z-index: 1;
   text-align: center;
   border-bottom: 2px solid black;
   margin:20rpx;
+  font-size: 40rpx;
 }
 /* section titles */
 
@@ -57,20 +62,22 @@ z-index: 1;
   /* border: 0.5rpx solid rgb(145, 145, 145); */
   border-radius: 3rpx;
   padding-bottom: 5rpx;
+  padding: 5rpx;
   background-color: white;
-  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
+  box-shadow: 2rpx 2rpx 5rpx rgba(0, 0, 0, 0.5);
 }
 
 .row-1 {
   height: 124rpx; 
   display: flex;
 }
-
 .row-2 {
-  height: 76rpx;
+  height: 85rpx;
   position: relative
 }
-
+.row-3 {
+  margin: 50rpx 50rpx
+}
 
 .avatar {
   /* justify-content: space-around */
@@ -82,6 +89,8 @@ z-index: 1;
   width: 100%;
   height: 100%;
   border-radius: 50%;
+  margin-left: 10rpx;
+  margin-top: 10rpx;
 }
 
 .details {
@@ -96,7 +105,7 @@ z-index: 1;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  font-size: 50rpx;
+  font-size: 40rpx;
 }
 
 .location {
@@ -171,18 +180,19 @@ z-index: 1;
 
 .call-button {
   position: absolute;
-  right: 10rpx;
+  right: 20rpx;
   background-color: #FF5D00;
   color: white;
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
   padding: 8rpx;
-  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  font-size: 40rpx;
 }
 
 .cancel-button {
   position: absolute;
-  right: 10rpx;
+  right: 20rpx;
   background-color: red;
   color: white;
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
@@ -190,7 +200,8 @@ z-index: 1;
   padding: 8rpx;
   width: 100rpx;
   text-align: center;
-  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  font-size: 40rpx;
 }
 
 .red {
@@ -239,10 +250,6 @@ z-index: 1;
 
 .expanded-card {
   min-width: 98% 
-}
-
-.row-3 {
-  margin: 50rpx 50rpx
 }
 
 .center {
