@@ -3,9 +3,6 @@ const globalData = app.globalData
 const myRequest = require('../../lib/api/request')
 
 Page({
-  onPullDownRefresh: function () {
-    wx.startPullDownRefresh()
-  },
   data: {
     showPopup: false,
     shouldNotPopup: false,
@@ -156,7 +153,25 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    let page = this
+    // Fetch Items from API
+    myRequest.get({
+      path: 'packages/available',
+      success(res) {
+        console.log(9999, res)
+        let trimmedNames = []
+        res.data.packages.forEach(function (element) {
 
+          trimmedNames.push(element.delivery_location_name.replace("四川大学江安校区", ""))
+        })
+
+        page.setData({ packages: res.data.packages.reverse() })
+        page.setData({ trimmedNames: trimmedNames })
+
+        console.log(88888, page.data)
+      }
+    })
+    wx.stopPullDownRefresh();
   },
 
   /**
