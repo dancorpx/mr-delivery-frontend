@@ -68,7 +68,7 @@
     <view class="myPackages">我的包裹</view>
   </view>
   <view class="tab active">
-   <view class="tabHead">全部</view>
+   <view class="tabHead">全部包裹</view>
   </view>
   
   <view class="tab" bindtap="goMyDeliveries">
