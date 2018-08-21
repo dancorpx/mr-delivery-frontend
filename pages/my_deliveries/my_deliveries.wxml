@@ -59,12 +59,13 @@
 
 <!-- tabs -->
 <view class='tabs'>
+<view class="tab" bindtap="goMyPackages">
+    <view class="myPackages">我的包裹</view>
+  </view>
   <view class="tab" bindtap="goIndex">
     <view class="index">全部</view>
   </view>
-  <view class="tab" bindtap="goMyPackages">
-    <view class="myPackages">我的包裹</view>
-  </view>
+  
   <view class="tab active">
     <view class="tabHead">送快递</view>
   </view>
