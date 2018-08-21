@@ -207,7 +207,7 @@ z-index: 1;
   position: absolute;
   background-color: rgba(57, 207, 57, 0.658);
   color: white;
-  margin-left: 430rpx;
+  margin-left: 410rpx;
   padding: 8rpx;
   border-radius: 5rpx;
   width: 100rpx; 

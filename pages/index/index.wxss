@@ -142,7 +142,7 @@ z-index: 1;
   height:75rpx;
   overflow:hidden;
   text-overflow: ellipsis;
-  font-size: 30rpx;
+  font-size: 25rpx;
 }
 
 .location-icon {
