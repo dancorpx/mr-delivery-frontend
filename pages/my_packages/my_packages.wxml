@@ -79,7 +79,7 @@
     <view class="tabHead">我的包裹</view>
   </view>
   <view class="tab" bindtap="goIndex">
-    <view class="index">全部</view>
+    <view class="index">全部包裹</view>
   </view>
  
   <view class="tab" bindtap="goMyDeliveries">
