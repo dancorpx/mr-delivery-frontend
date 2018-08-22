@@ -39,7 +39,7 @@
         </view>
       </view>
 
-      <view class="section__title">Details on package:</view>
+      <view class="section__title">包裹信息:</view>
     <view class="user-input">
       <view class="text-area-wrap">
         <input value='{{name}}' name="name_on_package" auto-height />
