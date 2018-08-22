@@ -8,17 +8,17 @@
   <form bindsubmit="bindSubmit">
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea placeholder="姓名"  name="name" auto-height />
+        <input placeholder="姓名"  name="name" />
       </view>
     </view>
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea style="input-size" placeholder='学生卡号' class="input-height" name="student_number" maxlength='-1' />
+        <input style="input-size" placeholder='学生卡号' class="input-height" name="student_number" maxlength='-1' />
       </view>
     </view>
      <view class="user-input">
       <view class="text-area-wrap">
-        <textarea style="input-size" placeholder='手机号' class="input-height" name="phone_number" maxlength='-1' />
+        <input style="input-size" placeholder='手机号' class="input-height" name="phone_number" maxlength='-1' />
       </view>
     </view>
     
