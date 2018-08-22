@@ -213,6 +213,7 @@ z-index: 1;
   font-size: 40rpx;
   width: 100rpx;
   /* display: flex; */
+  height: 56rpx;
 }
 .cancel-icon {
   height: 40rpx;

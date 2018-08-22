@@ -301,6 +301,7 @@ z-index: 1;
   width: 100rpx; 
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
   font-size: 40rpx;
+  height: 56rpx;
 }
 .red {
   border: 1rpx solid red
