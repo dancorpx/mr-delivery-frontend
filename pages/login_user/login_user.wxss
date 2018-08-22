@@ -9,52 +9,26 @@ page {
   padding-bottom: 30rpx; 
 }
 
-/* Card Component */
-.card-outer-border {
-  margin: 10px;
-  border: 0.5px solid rgb(145, 145, 145);
-  border-radius: 0px;
-}
-  
-.card-header-item {
-  background-color: rgb(145, 145, 145);
-  border-top-left-radius: 0px;
-  border-top-right-radius: 0px;
-  padding: 15px;
-  color: white;
-  font-size: 14px;
-}
-  
-.card-line {
-  border-top: 0.5px solid rgb(145, 145, 145);
-}
-  
-.card-body-item {
-  padding: 15px;
-  color: rgb(73, 73, 73);
-  font-size: 16px;
-  text-align: center;
-}
-  /* Card Component */
+
 
 /* form style */
 .user-input {
   width: 100%;
-  margin-bottom: 35rpx;
+  margin-bottom: 50rpx;
 }
-.input-height {
-  height: 20px;
+/* .input-height {
+  height: 20rpx;
 }
 .input-label {
   font-size: 10rpx;
-}
+} */
 textarea {
   padding: 10rpx 0;
   font-size: 35rpx;
-  
 }
 .text-area-wrap {
   padding: 15rpx 15rpx;
+  height: 5vh;
   background-color: rgb(230, 228, 228);
   margin-top:8px;
   border-radius: 0px;
