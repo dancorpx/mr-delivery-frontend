@@ -11,6 +11,7 @@ Page({
   data: {
     showPopup: false,
     claimed: false,
+    shouldNotPopup: false,
   },
   goMyDeliveries: function () {
     wx.reLaunch({
@@ -72,6 +73,7 @@ Page({
  },
 
  bindPhone: function (e) {
+    this.setData({ shouldNotPopup: true })
     myRequest.get({
       path: `deliveries/${e.currentTarget.dataset.delivery.delivery.id}`,
       success(res) {
@@ -161,6 +163,7 @@ Page({
   },
 
   expandCard: function (e) {
+    if (this.data.shouldNotPopup == false) {
     console.log(565656, e)
     this.setData({ delivery_location_name: e.currentTarget.dataset.delivery_location_name })
     this.setData({ delivery_time_start: e.currentTarget.dataset.delivery_time_start })
@@ -176,6 +179,8 @@ Page({
     this.setData({ verification_code: e.currentTarget.dataset.verification_code})
     this.setData({ claimed: e.currentTarget.dataset.claimed})
     this.setData({ showPopup: true })
+    }
+    this.setData({ shouldNotPopup: false })
     console.log(e.currentTarget.dataset.verification_code)
   },
 

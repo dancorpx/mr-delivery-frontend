@@ -32,6 +32,7 @@ Page({
   },
 
   openLocation: function (e) {
+    this.setData({ shouldNotPopup: true })
     console.log(1122334455,e.currentTarget.dataset.package.delivery_location_lat)
     wx.openLocation({
       latitude: e.currentTarget.dataset.package.delivery_location_lat,

@@ -25,10 +25,28 @@
     <!-- <map id="myMap" latitude="" longditude="" show-location style="width: 100%; height: 200px;" /> -->
    <button bindtap="grantAuthorizeLocation" class="home-location">{{address_name}}</button>
    <view class="button-container"> 
-      <button bindtap="takePhoto1" class='img-upload'>上载照片</button>
-      <button bindtap="takePhoto2" class='qrcode-upload'>上载二维码</button>
-    </view>
+     <view class='image-upload'>
+      <view class="weui-uploader__input-box">
+        <view class="weui-uploader__input" bindtap="takePhoto1">
+        </view>
+      </view>
+      <view class='text'>
+        请上传你本人的照片
+      </view>
+     </view>
+     <view class='image-upload'>
+      <view class="weui-uploader__input-box">
+        <view class="weui-uploader__input" bindtap="takePhoto1">
+        </view>
+      </view>
+      <view class='text'>
+         请上传你的收款码
+      </view>
+     </view>
+    <!-- <button bindtap="takePhoto1" class='img-upload'>上载照片</button>
+    <button bindtap="takePhoto2" class='qrcode-upload'>上载二维码</button> -->
+   </view>
     <button class="submit-button" form-type="submit" open-type="getUserInfo" bindgetuserinfo="getUserInfo">进入</button>
   </form>
-</view>
+ </view>
 <!-- form -->
