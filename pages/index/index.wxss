@@ -1,6 +1,7 @@
 /**index.wxss**/
 page {
-  background-color:#9FDAF0;
+  /* background-color:#9FDAF0; */
+  background-color:#005FA0;
   /* background-color: white; */
 }
 .tabs {
@@ -11,15 +12,71 @@ height: 8vh;
 justify-content: space-evenly;
 z-index: 1;
 }
+
+.sub-tabs {
+position: fixed;
+margin-top: 20rpx;
+left: 10vw;
+top: 8vh;
+display: flex;
+height: 6vh;
+width: 80vw;
+justify-content: space-evenly;
+z-index: 1;
+border: 5rpx solid white;
+border-radius: 10rpx;
+}
+
+.sub-tab.active {
+  display: flex;
+  width: 40vw;
+  color: white;
+  /* border-left: 3rpx solid white; */
+  /* background: #9FDAF0; */
+  background-color:#005FA0;
+  font-weight: bold;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  /* padding-top: 10px; */
+  /* border-bottom: 1px solid #9FDAF0; */
+  /* font-size: 40rpx; */
+}
+
+.sub-tab {
+  background: white;
+  font-size: 40rpx;
+   /* border: 1px solid lightgrey;  */
+}
+
+.index {
+  flex: 1;
+  width: 40vw;
+  text-align: center;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  font-size: 35rpx;
+}
+
+.myDeliveriesSub {
+  flex: 1;
+  width: 40vw;
+  text-align: center;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  font-size: 35rpx;
+}
+
 .tab.active {
   flex: 1;
-  width: 33vw;
+  width: 50vw;
   color: white;
-  background: #9FDAF0;
+  /* background: #9FDAF0; */
+  background-color:#005FA0;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
-  border-bottom: 1px solid #9FDAF0;
+  border-bottom: 1px solid #005FA0;
   font-size: 40rpx;
 }
 
@@ -29,17 +86,17 @@ z-index: 1;
   border-bottom: 1px solid lightgrey;
 }
 
-.myDeliveries {
+/* .myDeliveries {
   flex: 1;
-  width: 33vw;
+  width: 50vw;
   text-align: center;
   padding-top: 10px;
   font-size: 40rpx;
-}
+} */
 
 .myPackages {
   flex: 1;
-  width: 34vw;
+  width: 50vw;
   text-align: center;
   padding-top: 10px;
   font-size: 40rpx;
@@ -51,10 +108,10 @@ z-index: 1;
 }
 
 .section-title {
-  color: black;
+  color: white;
   font-weight: lighter;
   text-align: center;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid white;
   margin:20rpx;
   font-size: 40rpx;
 }

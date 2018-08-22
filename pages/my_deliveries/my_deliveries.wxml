@@ -62,16 +62,29 @@
 <view class="tab" bindtap="goMyPackages">
     <view class="myPackages">我的包裹</view>
   </view>
-  <view class="tab" bindtap="goIndex">
+  <!-- <view class="tab" bindtap="goIndex">
     <view class="index">全部包裹</view>
-  </view>
+  </view> -->
   
   <view class="tab active">
     <view class="tabHead">送快递</view>
   </view>
 </view>
 <!-- tabs -->
-<view style='padding-top:65px'></view>
+<!--sub-tabs ///////////////////////////////////  -->
+<!--sub-tabs  ///////////////////////////////////////////////////////////////-->
+<view class="sub-tabs">
+ <view class="sub-tab " bindtap="goIndex">
+    <view class="index">全部包裹</view>
+  </view>
+
+
+ <view class="sub-tab active" bindtap="goMyDeliveries">
+    <view class="myDeliveriesSub">我的快递</view>
+  </view>
+</view>
+<!--sub-tabs  ///////////////////////////////////////////////////////////////-->
+<view style='padding-top:95px'></view>
 
 <!-- for each card: height: 200rpx -->
 

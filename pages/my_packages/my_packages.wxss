@@ -15,7 +15,7 @@ z-index: 1;
 
 .tab.active {
   flex: 1;
-  width: 33vw;
+  width: 50vw;
   color: white;
   background: #9FDAF0;
   font-weight: bold;
@@ -31,7 +31,7 @@ z-index: 1;
 }
 .myDeliveries {
   flex: 1;
-  width: 33vw;
+  width: 50vw;
   text-align: center;
   padding-top: 10px;
   font-size: 40rpx;
