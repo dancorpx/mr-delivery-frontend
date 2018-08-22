@@ -19,17 +19,7 @@ Page({
     })
   },
 
-  bindAddPage: function(e) {
-    if (globalData.userPhoneNumber === null ) {
-      wx.navigateTo({
-        url: '/pages/login_user/login_user',
-      })
-    }else{
-      wx.navigateTo({
-        url: '/pages/post_item/post_item',
-      })
-    }
-  },
+  
 
   openLocation: function (e) {
     this.setData({ shouldNotPopup: true })
@@ -59,17 +49,6 @@ Page({
         }
       })
 } else if (globalData.userPhoto === null) {
-      wx.showModal({
-        title: ' 错误!',
-        content: "你不能添加自己的包裹!",
-        success: function (res) {
-          if (res.confirm) {
-            console.log('confirm')
-          } else if (res.cancel) {
-            console.log('cancel')
-          }
-        }
-      })
       wx.navigateTo({
         url: `/pages/login_worker/login_worker?id=${e.currentTarget.dataset.hi}`,
       })
@@ -120,14 +99,14 @@ Page({
       path: 'packages/available',
         success(res) {
           console.log(9999,res)
-          let trimmedNames = []
-          res.data.packages.forEach(function (element) {
+          // let trimmedNames = []
+          // res.data.packages.forEach(function (element) {
            
-            trimmedNames.push(element.delivery_location_name.replace("四川大学江安校区", ""))
-          })
+          //   trimmedNames.push(element.delivery_location_name.replace("四川大学江安校区", ""))
+          // })
         
           page.setData({packages: res.data.packages.reverse()})
-          page.setData({ trimmedNames: trimmedNames })
+          // page.setData({ trimmedNames: trimmedNames })
 
          console.log(88888, page.data)
         }

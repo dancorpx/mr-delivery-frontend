@@ -6,14 +6,14 @@ const AV = require('../../utils/av-weapp-min.js');
 
 Page({
     data: {
-      name: "姓名",
-      student_number: "学生卡号",
-      phone_number: "手机号",
+      // name: "姓名",
+      // student_number: "学生卡号",
+      // phone_number: "手机号",
       address_name: "请选择宿舍楼",
       show: 'display: none;'
     },
 
-    getUserInfo: function (e) {
+  getUserInfo: function (e) {
     let page = this
     console.log(1111, e)
     globalData.userInfo = e.detail.userInfo 
@@ -23,6 +23,19 @@ Page({
 
     wx.showToast({ title: '登录中...', icon: 'loading', duration: 1000 })
     console.log(7777, globalData)
+  if (page.data.photo === undefined || page.data.static_pay_qr === undefined ){
+    wx.showModal({
+      title: '错误',
+      content: '您输入的信息有误',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('confirm')
+        } else if (res.cancel) {
+          console.log('cancel')
+        }
+      }
+    })
+  } else {
     myRequest.put({
       path: `users/${globalData.userId}`,
       data: {
@@ -61,31 +74,45 @@ Page({
           globalData.userPhoto = res.data.photo
           globalData.userAvatar = res.data.avatar
 
-          myRequest.put({
-            path: `packages/${page.data.currentPackage}`,
+          console.log(987654321, page.data.currentPackage)
+
+          myRequest.post({
+            path: 'deliveries',
             data: {
-              available: false,
-              accepted: true,
+              worker_id: globalData.userId,
+              package_id: page.data.currentPackage
             },
             success(res) {
-              console.log(999999, res)
+              console.log(98989, res)
+              myRequest.put({
+                path: `packages/${page.data.currentPackage}`,
+                data: {
+                  available: false,
+                  accepted: true,
+                },
+                success(res) {
+                  console.log(999999, res)
+                }
+              })
             }
           })
-
           wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
-          wx.navigateTo({
+          setTimeout(function () {
+          wx.reLaunch({
             url: '/pages/my_deliveries/my_deliveries'
           })
+          }, 1000)
         }
-        setTimeout(function () {
-          wx.navigateTo({
-            // url: '/pages/my_deliveries/my_deliveries'
-          })
-        }, 1000)
+        // setTimeout(function () {
+        //   wx.navigateTo({
+        //     // url: '/pages/my_deliveries/my_deliveries'
+        //   })
+        // }, 1000)
       }
     })
-   
+  }
   },
+
 bindSubmit: function (e) {
   let page = this
   page.setData({
@@ -129,7 +156,6 @@ takePhoto1: function () {
       console.log(2323, tempFilePaths)
       let tempFilePath = res.tempFilePaths[0];
       page.setData({tempPhotoPlaceholder: tempFilePath})
-      page.setData({show: ""})
       console.log('sending image to LeanCloud')
       new AV.File('file-name', {
         blob: {
@@ -172,9 +198,10 @@ takePhoto2: function () {
 
   onLoad: function (options) {
     console.log(555,options)
+    let cP = parseInt(options.id, 10)
     if (globalData.userName != null){
     this.setData({
-      currentPackage: options.id,
+      currentPackage: cP,
       name: globalData.userName,
       phone_number: globalData.userPhoneNumber,
       student_number: globalData.userStudentNumber,
@@ -183,7 +210,12 @@ takePhoto2: function () {
       address_lng: globalData.userAddressLng,
     })
     console.log(112233, this.data)
+    }else {
+      this.setData({
+        currentPackage: cP
+      })
     }
+    console.log(11223344, this.data.currentPackage)
   },
 
 
