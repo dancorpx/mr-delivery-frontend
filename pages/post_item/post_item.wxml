@@ -6,7 +6,7 @@
 <form bindsubmit="bindSubmit">
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea placeholder="请输入快递代码"  name="kuai_di_code" auto-height />
+        <input placeholder="请输入快递代码"  name="kuai_di_code" auto-height />
       </view>
     </view>
     
@@ -35,19 +35,19 @@
 
     <view class="user-input">
         <view class="text-area-wrap">
-          <textarea placeholder='添加备注' name="comment" auto-height />
+          <input placeholder='添加备注' name="comment" auto-height />
         </view>
       </view>
 
       <view class="section__title">Details on package:</view>
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea value='{{name}}' name="name_on_package" auto-height />
+        <input value='{{name}}' name="name_on_package" auto-height />
       </view>
     </view>
       <view class="user-input">
         <view class="text-area-wrap">
-          <textarea value='{{phone_number}}' name="phone_on_package" auto-height />
+          <input value='{{phone_number}}' name="phone_on_package" auto-height />
         </view>
       </view>
        
