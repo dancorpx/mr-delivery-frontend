@@ -134,7 +134,7 @@
             <image src="../../lib/images/box-solid.svg" class="large padding {{package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
            <view class='map-button red-border' bindtap="openLocation" data-package="{{package}}">
-            位置
+            <image src="../../common/images/map-marked-alt-solid.svg" class="map-icon" />
           </view>
            <view class='expand-button red-border' bindtap="bindAddDelivery" data-hi="{{package.id}}" data-customer_id="{{package.customer_id}}">
           添加包裹
