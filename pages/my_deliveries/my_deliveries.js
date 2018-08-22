@@ -6,7 +6,7 @@ Page({
 
   data: { 
     showPopup: false,
-    
+    shouldNotPopup: false,
   },
 
   goIndex: function () {
@@ -21,6 +21,7 @@ Page({
   },
 
   openLocation: function (e) {
+    this.setData({ shouldNotPopup: true })
     console.log(1122334455, e.currentTarget.dataset.package.delivery_location_lat)
     wx.openLocation({
       latitude: e.currentTarget.dataset.package.delivery_location_lat,
@@ -30,6 +31,7 @@ Page({
   },
 
   bindPhone: function (e) {
+    this.setData({ shouldNotPopup: true })
     console.log(556644, e.currentTarget.dataset.userphone)
     wx.makePhoneCall({
       phoneNumber: `${e.currentTarget.dataset.userphone}`
@@ -37,6 +39,7 @@ Page({
   },
 
   bindComplete: function (e) {
+    this.setData({ shouldNotPopup: true })
     console.log(1122334455, e)
     globalData.currentConfirmPackage = e.currentTarget.dataset.hi
     globalData.currentConfirmVerification = e.currentTarget.dataset.verification
@@ -123,6 +126,7 @@ Page({
   },
 
   expandCard: function (e) {
+    if (this.data.shouldNotPopup == false) {
     console.log(565656, e)
     this.setData({ delivery_location_name: e.currentTarget.dataset.delivery_location_name })
     this.setData({ delivery_time_start: e.currentTarget.dataset.delivery_time_start })
@@ -135,6 +139,8 @@ Page({
     this.setData({ kuai_di_code: e.currentTarget.dataset.kuai_di_code })
     this.setData({ comment: e.currentTarget.dataset.comment })
     this.setData({ showPopup: true })
+    }
+    this.setData({ shouldNotPopup: false })
   },
 
   closePopup: function (e) {

@@ -49,6 +49,8 @@ button {
 }
 .button-container {
   display: inline-flex;
+  flex-direction: row;
+  justify-content: space-evenly;
   /* height: 120rpx; */
   width: 643rpx;
 }
@@ -77,3 +79,26 @@ button {
 }
 /* submit button */
 /* Buttons */
+
+.image-upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250rpx;
+}
+
+.weui-uploader__input-box {
+  background-color: rgb(230, 228, 228);
+}
+
+.weui-uploader__input {
+  background-color: black;
+}
+
+.text {
+  text-justify: auto;
+  color: grey;
+  font-weight: lighter;
+  font-size: 25rpx
+}
