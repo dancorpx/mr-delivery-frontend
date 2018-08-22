@@ -90,7 +90,7 @@ Page({
       },
       success(res) {
         console.log(98989, res)
-        if (res.satusCode === 200) {
+        if (res.statusCode < 300 ) {
         wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
         wx.reLaunch({
           url: '/pages/my_packages/my_packages'
