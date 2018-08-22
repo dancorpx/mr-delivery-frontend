@@ -38,7 +38,7 @@ Page({
       },
       success(res) {
         console.log(98989, res)
-        if (res.data.statusCode != 200) {
+        if (res.statusCode != 200) {
           wx.showModal({
             title: '错误',
             content: `${res.data.error}`,
@@ -73,11 +73,13 @@ Page({
           })
 
           wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
-          
+          wx.navigateTo({
+            url: '/pages/my_deliveries/my_deliveries'
+          })
         }
         setTimeout(function () {
           wx.navigateTo({
-            url: '/pages/my_deliveries/my_deliveries'
+            // url: '/pages/my_deliveries/my_deliveries'
           })
         }, 1000)
       }

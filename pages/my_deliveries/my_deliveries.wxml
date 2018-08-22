@@ -84,7 +84,7 @@
   </view>
 </view>
 <!--sub-tabs  ///////////////////////////////////////////////////////////////-->
-<view style='padding-top:95px'></view>
+<view style='padding-top:16vh;'></view>
 
 <!-- for each card: height: 200rpx -->
 
@@ -93,7 +93,7 @@
 <view class="flex-display">
   <block wx:for="{{acceptedDeliveries}}" wx:for-item="delivery" wx:key="deliveries">
     <view class="card">
-      <view class="card-outer-border" bindtap='expandCard' data-delivery_location_name="{{delivery.package.delivery_location_name}}" data-delivery_time_start="{{delivery.package.delivery_time_start}}" data-delivery_time_end="{{delivery.package.delivery_time_end}}" data-price="{{delivery.package.price}}" data-size="{{delivery.package.size}}" data-avatar="{{delivery.customer.avatar}}" data-name_on_package="{{package.name_on_package}}" data-phone_on_package="{{package.phone_on_package}}" data-kuai_di_code="{{delivery.package.kuai_di_code}}" data-comment="{{delivery.package.comment}}">
+      <view class="card-outer-border" bindtap='expandCard' data-delivery_location_name="{{delivery.package.delivery_location_name}}" data-delivery_time_start="{{delivery.package.delivery_time_start}}" data-delivery_time_end="{{delivery.package.delivery_time_end}}" data-price="{{delivery.package.price}}" data-size="{{delivery.package.size}}" data-avatar="{{delivery.customer.avatar}}" data-name_on_package="{{delivery.package.name_on_package}}" data-phone_on_package="{{delivery.package.phone_on_package}}" data-kuai_di_code="{{delivery.package.kuai_di_code}}" data-comment="{{delivery.package.comment}}">
         <view class='row-1'>
           <view class='avatar red-border'>
             <image class="avatar-img" src="{{delivery.customer.avatar}}" ></image>
