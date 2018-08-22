@@ -8,12 +8,12 @@
   <form bindsubmit="bindSubmit">
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea placeholder="姓名" value="{{name}}" name="name" auto-height />
+        <input placeholder="姓名" value="{{name}}" name="name" auto-height />
       </view>
     </view>
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea style="input-size" placeholder='学生卡号' class="input-height" value="{{student_number}}" name="student_number" maxlength='-1' />
+        <input style="input-size" placeholder='学生卡号' class="input-height" value="{{student_number}}" name="student_number" maxlength='-1' />
       </view>
     </view>
      <view class="user-input">
