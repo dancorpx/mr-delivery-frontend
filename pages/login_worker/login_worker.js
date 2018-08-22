@@ -10,7 +10,7 @@ Page({
       // student_number: "学生卡号",
       // phone_number: "手机号",
       address_name: "请选择宿舍楼",
-      
+      show: 'display: none;'
     },
 
     getUserInfo: function (e) {
@@ -128,6 +128,8 @@ takePhoto1: function () {
       var tempFilePaths = res.tempFilePaths
       console.log(2323, tempFilePaths)
       let tempFilePath = res.tempFilePaths[0];
+      page.setData({tempPhotoPlaceholder: tempFilePath})
+      page.setData({show: ""})
       console.log('sending image to LeanCloud')
       new AV.File('file-name', {
         blob: {
@@ -153,6 +155,7 @@ takePhoto2: function () {
       var tempFilePaths = res.tempFilePaths
       console.log(tempFilePaths)
       let tempFilePath = res.tempFilePaths[0];
+      page.setData({ tempQrPlaceholder: tempFilePath })
       console.log('sending image to LeanCloud')
       new AV.File('file-name', {
         blob: {
