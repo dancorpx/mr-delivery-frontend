@@ -7,6 +7,7 @@ Page({
     showPopup: false,
     shouldNotPopup: false,
   },
+  
     goMyDeliveries: function() {
       wx.reLaunch({
        url: '/pages/my_deliveries/my_deliveries'
