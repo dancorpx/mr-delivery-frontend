@@ -93,7 +93,7 @@
   <button bindtap="bindAddPage"><image src="../../common/images/plus.png" class='add-button'></image></button>
 </view> -->
 
-<view style='padding-top:90px'></view>
+<view style='padding-top: 16vh;'></view>
 <view class="section-title">未被确认包裹</view>
 <!-- for each card: height: 200rpx -->
 <view class="flex-display">

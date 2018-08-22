@@ -99,7 +99,7 @@
 </view>
 <!-- add button -->
 
-<view style='padding-top:65px'></view>
+<view style='padding-top:9vh;'></view>
 
 <!-- for each card: height: 200rpx -->
 <view class="section-title">未被确认包裹</view>

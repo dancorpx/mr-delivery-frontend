@@ -84,7 +84,24 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+    let page = this
+    console.log(111222, globalData.userId)
+    myRequest.get({
+      path: `deliveries/accepted?worker_id=${globalData.userId}`,
+      success(res) {
+        console.log(33331111, res)
+        page.setData({ acceptedDeliveries: res.data.deliveries.reverse() })
+        console.log
+      }
+    })
+    myRequest.get({
+      path: `deliveries/completed?worker_id=${globalData.userId}`,
+      success(res) {
+        console.log(33331111, res)
+        page.setData({ completedDeliveries: res.data.deliveries.reverse() })
+        console.log
+      }
+    })
   },
 
   /**
