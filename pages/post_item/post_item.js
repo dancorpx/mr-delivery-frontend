@@ -98,7 +98,7 @@ Page({
         } else {
           wx.showModal({
             title: '错误',
-            content: `${res.data.errors}`,
+            content: '您输入的信息有误',
             success: function (res) {
               if (res.confirm) {
                 console.log('confirm')
