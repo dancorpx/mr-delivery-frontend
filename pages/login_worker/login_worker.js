@@ -38,7 +38,7 @@ Page({
       },
       success(res) {
         console.log(98989, res)
-        if (res.statusCode != 200) {
+        if (res.statusCode > 300) {
           wx.showModal({
             title: '错误',
             content: `${res.data.error}`,
