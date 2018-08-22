@@ -33,7 +33,7 @@ border-radius: 10rpx;
   color: black;
   /* border-left: 3rpx solid white; */
   /* background: #9FDAF0; */
-  background-color:white;
+  background-color:lightgrey;
   align-items: center;
   justify-content: space-around;
   text-align: center;
@@ -44,10 +44,10 @@ border-radius: 10rpx;
 }
 
 .sub-tab {
-  background: #005FA0;
+  background: white;
   font-size: 40rpx;
   /* font-weight: bold; */
-  color: white;
+  color: black;
    /* border: 1px solid lightgrey;  */
 }
 
