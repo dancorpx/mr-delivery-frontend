@@ -59,12 +59,13 @@
 
 <!-- tabs -->
 <view class='tabs'>
-  <view class="tab" bindtap="goIndex">
-    <view class="index">全部</view>
-  </view>
-  <view class="tab" bindtap="goMyPackages">
+<view class="tab" bindtap="goMyPackages">
     <view class="myPackages">我的包裹</view>
   </view>
+  <view class="tab" bindtap="goIndex">
+    <view class="index">全部包裹</view>
+  </view>
+  
   <view class="tab active">
     <view class="tabHead">送快递</view>
   </view>
@@ -87,7 +88,7 @@
           <view class='details red-border'>
             <view class='location red-border'>
               <view class=''>
-               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon' bindtap="openLocation" data-package="{{delivery.package}}"></image>
+               <image src="../../lib/images/map-marker-alt-solid.svg" class='location-icon'></image>
               </view>
               <view class='location-name red-border'>
                 {{delivery.package.delivery_location_name}}
@@ -112,11 +113,15 @@
             <image src="../../lib/images/box-solid.svg" class="medium padding {{delivery.package.size == 'Medium' ? '' : 'fade' }}"></image>
             <image src="../../lib/images/box-solid.svg" class="large padding {{delivery.package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
-          <view>
-          <view class="confirm-button" bindtap="bindComplete" data-hi="{{delivery.package.id}}" data-verification="{{delivery.package.verification_code}}" data-worker_qr="{{delivery.worker.static_pay_qr}}">确认</view>
+          
+          <view class='map-button red-border' bindtap="openLocation" data-package="{{delivery.package}}">
+            位置
           </view>
           <view class='call-button red-border' bindtap="bindPhone" data-userPhone="{{delivery.customer.phone_number}}">
             打电话
+          </view>
+          <view>
+          <view class="confirm-button" bindtap="bindComplete" data-hi="{{delivery.package.id}}" data-verification="{{delivery.package.verification_code}}" data-worker_qr="{{delivery.worker.static_pay_qr}}">确认</view>
           </view>
         </view>
       </view>

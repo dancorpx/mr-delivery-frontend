@@ -173,9 +173,10 @@ Page({
     this.setData({ kuai_di_code: e.currentTarget.dataset.kuai_di_code })
     this.setData({ comment: e.currentTarget.dataset.comment })
     this.setData({ delivery_guy_avatar: e.currentTarget.dataset.delivery_guy_avatar})
+    this.setData({ verification_code: e.currentTarget.dataset.verification_code})
     this.setData({ claimed: e.currentTarget.dataset.claimed})
     this.setData({ showPopup: true })
-    console.log(333333, this.data)
+    console.log(e.currentTarget.dataset.verification_code)
   },
 
   closePopup: function (e) {

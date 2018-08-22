@@ -34,6 +34,11 @@
     </radio-group>
 
     <view class="user-input">
+        <view class="text-area-wrap">
+          <textarea placeholder='添加备注' name="comment" auto-height />
+        </view>
+      </view>
+    <view class="user-input">
       <view class="text-area-wrap">
         <textarea value='{{name}}' name="name_on_package" auto-height />
       </view>
@@ -43,13 +48,9 @@
           <textarea value='{{phone_number}}' name="phone_on_package" auto-height />
         </view>
       </view>
-       <view class="user-input">
-        <view class="text-area-wrap">
-          <textarea placeholder='添加备注' name="comment" auto-height />
-        </view>
-      </view>
+       
 
-    <button bindtap="grantAuthorizeLocation" class="home-location">{{address_name}}</button>
+    <button bindtap="grantAuthorizeLocation" class="home-location">{{delivery_location_name}}</button>
 
     <button class="submit-button" form-type="submit" >提交</button>
   </form>

@@ -8,7 +8,7 @@ Page({
   onLoad: function (options) {
     setTimeout(function () {
       wx.reLaunch({
-        url: '/pages/index/index'
+        url: '/pages/my_packages/my_packages'
       })
     }, 2000);
   },

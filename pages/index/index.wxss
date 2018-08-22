@@ -185,13 +185,29 @@ z-index: 1;
   padding-top: 20rpx;
 }
 
+.map-button {
+  text-align: center;
+  position: absolute;
+  right: 210rpx;
+  background-color: #FFA900;
+  color: white;
+  /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
+  border-radius: 5rpx;
+   width: 100rpx; 
+  padding: 8rpx;
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  font-size: 40rpx;
+}
+
 .expand-button {
   position: absolute;
   right: 20rpx;
-  background-color: #FF5D00;
+  /* background-color: #FF5D00; */
+ background-color:  rgba(57, 207, 57, 0.658);
   color: white;
   /* text-shadow: 2px 2px rgba(128, 128, 128, 0.4); */
-  box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1);
+  box-shadow: 2rpx 2rpx rgb(100, 100, 100);
+  /* box-shadow: 5rpx 5rpx rgba(50, 50, 50, 0.1); */
   border-radius: 5rpx;
   padding: 8rpx;
   font-size: 40rpx;
