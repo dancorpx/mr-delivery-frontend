@@ -1,5 +1,5 @@
 page {
-  background-color:  #9FDAF0;
+  background-color:  #005FA0;
 }
 
 .flex-display {
@@ -13,7 +13,7 @@ page {
   position: fixed;
   opacity: 1;
   z-index: 3;
-  background-color:rgba(159, 218, 240, 0.788);
+  background-color:rgba(0, 95, 160, 0.788);
   display: flex;
   justify-content: space-around;
   align-items: center;
