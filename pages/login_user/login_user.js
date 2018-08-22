@@ -34,7 +34,7 @@ Page({
         if (res.statusCode > 300) {
           wx.showModal({
             title: '错误',
-            content:`${res.data.error}`,
+            content: '您输入的信息有误',
             success: function (res) {
               if (res.confirm) {
                 console.log('confirm')
