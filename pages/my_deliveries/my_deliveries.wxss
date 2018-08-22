@@ -177,7 +177,7 @@ z-index: 1;
 }
 .location-name{
   width: 345rpx;
-  height: 60rpx;
+  height: 75rpx;
   overflow:hidden;
   text-overflow: ellipsis;
   font-size: 25rpx;
