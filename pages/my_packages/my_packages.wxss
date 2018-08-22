@@ -212,15 +212,9 @@ z-index: 1;
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
   font-size: 40rpx;
   width: 100rpx;
+  height: 56rpx;
   /* display: flex; */
   height: 56rpx;
-}
-.cancel-icon {
-  height: 40rpx;
-  width: 40rpx;
-  padding: 8rpx;
-  align-content: center;
-  padding-left: 30rpx;
 }
 
 .red {

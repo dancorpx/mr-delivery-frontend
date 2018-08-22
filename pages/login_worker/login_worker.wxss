@@ -50,7 +50,7 @@ button {
   flex-direction: row;
   justify-content: space-evenly;
   /* height: 120rpx; */
-  width: 643rpx;
+  width: 100%
 }
 .img-upload {
   /* padding: 15rpx; */
