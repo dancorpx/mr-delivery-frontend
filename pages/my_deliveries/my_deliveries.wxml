@@ -128,10 +128,10 @@
           </view>
           
           <view class='map-button red-border' bindtap="openLocation" data-package="{{delivery.package}}">
-            位置
+            <image src="../../common/images/map-marked-alt-solid.svg" class="map-icon" />
           </view>
           <view class='call-button red-border' bindtap="bindPhone" data-userPhone="{{delivery.customer.phone_number}}">
-            打电话
+           <image src="../../common/images/phone-solid.svg" class="phone-icon" />
           </view>
           <view>
           <view class="confirm-button" bindtap="bindComplete" data-hi="{{delivery.package.id}}" data-verification="{{delivery.package.verification_code}}" data-worker_qr="{{delivery.worker.static_pay_qr}}">确认</view>

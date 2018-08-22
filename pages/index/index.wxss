@@ -30,22 +30,24 @@ border-radius: 10rpx;
 .sub-tab.active {
   display: flex;
   width: 40vw;
-  color: white;
+  color: black;
   /* border-left: 3rpx solid white; */
   /* background: #9FDAF0; */
-  background-color:#005FA0;
-  font-weight: bold;
+  background-color:white;
   align-items: center;
   justify-content: space-around;
   text-align: center;
   /* padding-top: 10px; */
   /* border-bottom: 1px solid #9FDAF0; */
   /* font-size: 40rpx; */
+  font-weight: bold;
 }
 
 .sub-tab {
-  background: white;
+  background: #005FA0;
   font-size: 40rpx;
+  /* font-weight: bold; */
+  color: white;
    /* border: 1px solid lightgrey;  */
 }
 
@@ -247,13 +249,21 @@ border-radius: 10rpx;
   position: absolute;
   right: 210rpx;
   background-color: #FFA900;
-  color: white;
+  /* color: white; */
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
-   width: 100rpx; 
+  width: 100rpx; 
   padding: 8rpx;
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
-  font-size: 40rpx;
+  /* font-size: 40rpx; */
+  display: flex;
+}
+.map-icon {
+  height: 40rpx;
+  width: 40rpx;
+  padding: 8rpx;
+  align-content: center;
+  padding-left: 30rpx;
 }
 
 .expand-button {
@@ -268,7 +278,6 @@ border-radius: 10rpx;
   border-radius: 5rpx;
   padding: 8rpx;
   font-size: 40rpx;
-
 }
 
 .red {

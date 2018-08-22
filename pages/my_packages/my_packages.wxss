@@ -181,13 +181,22 @@ z-index: 1;
 .call-button {
   position: absolute;
   right: 20rpx;
-  background-color: #FF5D00;
-  color: white;
+  background-color: #FFA900;
+  /* color: white; */
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
   padding: 8rpx;
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
-  font-size: 40rpx;
+  /* font-size: 40rpx; */
+  width: 100rpx;
+  display: flex;
+}
+.phone-icon {
+  height: 40rpx;
+  width: 40rpx;
+  padding: 8rpx;
+  align-content: center;
+  padding-left: 30rpx;
 }
 
 .cancel-button {
@@ -198,10 +207,19 @@ z-index: 1;
   /* text-shadow: 2rpx 2rpx rgba(128, 128, 128, 0.4); */
   border-radius: 5rpx;
   padding: 8rpx;
-  width: 100rpx;
+  /* width: 100rpx; */
   text-align: center;
   box-shadow: 2rpx 2rpx rgb(100, 100, 100);
   font-size: 40rpx;
+  width: 100rpx;
+  /* display: flex; */
+}
+.cancel-icon {
+  height: 40rpx;
+  width: 40rpx;
+  padding: 8rpx;
+  align-content: center;
+  padding-left: 30rpx;
 }
 
 .red {

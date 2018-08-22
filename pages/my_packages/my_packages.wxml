@@ -73,11 +73,6 @@
 </view>
 
 
-
-
-
-
-
 <!-- tabs -->
 <view class='tabs'>
  <view class="tab active">
@@ -191,7 +186,7 @@
             <image src="../../lib/images/box-solid.svg" class="large padding {{package.size == 'Large' ? '' : 'fade' }}"></image>
           </view>
           <view class='call-button red-border' bindtap="bindPhone" data-delivery="{{package.delivery}}">
-            打电话
+            <image src="../../common/images/phone-solid.svg" class="phone-icon" />
           </view>
         </view>
       </view>
