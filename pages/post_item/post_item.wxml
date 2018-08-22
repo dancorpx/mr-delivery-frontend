@@ -38,6 +38,8 @@
           <textarea placeholder='添加备注' name="comment" auto-height />
         </view>
       </view>
+
+      <view class="section__title">Details on package:</view>
     <view class="user-input">
       <view class="text-area-wrap">
         <textarea value='{{name}}' name="name_on_package" auto-height />

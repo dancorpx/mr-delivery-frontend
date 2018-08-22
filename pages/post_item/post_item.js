@@ -90,14 +90,31 @@ Page({
       },
       success(res) {
         console.log(98989, res)
+        if (res.satusCode === 200) {
         wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
+        wx.reLaunch({
+          url: '/pages/my_packages/my_packages'
+        })
+        } else {
+          wx.showModal({
+            title: '错误',
+            content: `${res.data.errors}`,
+            success: function (res) {
+              if (res.confirm) {
+                console.log('confirm')
+              } else if (res.cancel) {
+                console.log('cancel')
+              }
+            }
+          })
+        }
       }
     })
-    setTimeout(function () {
-      wx.reLaunch({
-        url: '/pages/my_packages/my_packages'   
-      })
-    }, 1000)
+    // setTimeout(function () {
+    //   wx.reLaunch({
+    //     url: '/pages/my_packages/my_packages'   
+    //   })
+    // }, 1000)
   },
 
 

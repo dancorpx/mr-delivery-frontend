@@ -11,7 +11,7 @@ page {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding-top: 100rpx;
+  padding-top: 80rpx;
   padding-bottom: 0rpx;
   box-sizing: border-box;
 }
@@ -50,10 +50,12 @@ picker {
   box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
 }
 radio {
-  padding: 30rpx;
+ 
 }
 radio-group {
   color: rgb(130, 130, 130);
+   padding-top: 25rpx;
+ 
 }
 /* Button */
 .submit-button {
