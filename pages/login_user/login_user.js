@@ -55,15 +55,18 @@ Page({
         globalData.userAvatar = res.data.avatar
 
         wx.showToast({ title: '操作成功!', icon: 'success', duration: 1000 })
+        wx.navigateTo({
+            url: '/pages/post_item/post_item'
+          })
         }
       }
     })
-    setTimeout(function () {
-      wx.navigateBack({
-        // url: '/pages/index/index'
-        delta: 1
-      })
-    }, 1000)
+    // setTimeout(function () {
+    //   wx.navigateBack({
+    //     // url: '/pages/index/index'
+    //     delta: 1
+    //   })
+    // }, 1000)
   },
   bindSubmit: function (e) {
     let page = this

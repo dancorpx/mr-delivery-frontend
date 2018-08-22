@@ -11,6 +11,10 @@ page {
 }
 
 /* form style */
+form {
+  width: 80vw;
+}
+
 .user-input {
   width: 100%;
   margin-bottom: 20rpx;
@@ -19,7 +23,8 @@ page {
 .input-label {
   font-size: 10rpx;
 }
-textarea {
+
+input {
   padding: 10rpx 0;
   font-size: 35rpx;
 }
@@ -46,11 +51,10 @@ button {
   text-align: left;
 }
 .button-container {
-  display: inline-flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  display: flex;
+  justify-content: space-around;
   /* height: 120rpx; */
-  width: 100%
+  width: 80vw;
 }
 .img-upload {
   /* padding: 15rpx; */
@@ -71,7 +75,7 @@ button {
   color: white;
   margin: 100rpx;
   width: 420rpx;
-  margin-left: 120rpx;
+  /* margin-left: 120rpx; */
   box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
   font-weight: bold;
 }
@@ -95,6 +99,7 @@ button {
 
 .weui-uploader__input-box {
   background-color: rgb(230, 228, 228);
+  margin-right: 0px;
 }
 
 .weui-uploader__input {

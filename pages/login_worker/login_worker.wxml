@@ -8,17 +8,17 @@
   <form bindsubmit="bindSubmit">
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea placeholder="姓名" value="{{name}}" name="name" maxlength='-1' />
+        <input placeholder="姓名" value="{{name}}" name="name" maxlength='-1' />
       </view>
     </view>
     <view class="user-input">
       <view class="text-area-wrap">
-        <textarea  placeholder='学生卡号'  value="{{student_number}}" name="student_number" maxlength='-1' />
+        <input  placeholder='学生卡号'  value="{{student_number}}" name="student_number" maxlength='-1' />
       </view>
     </view>
      <view class="user-input">
       <view class="text-area-wrap">
-        <textarea  placeholder='手机号' value="{{phone_number}}" name="phone_number" maxlength='-1' />
+        <input  placeholder='手机号' value="{{phone_number}}" name="phone_number" maxlength='-1' />
       </view>
     </view>
     

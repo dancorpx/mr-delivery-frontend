@@ -46,11 +46,7 @@ Page({
   bindAddDelivery: function(e) {
     let page = this
     this.setData({ shouldNotPopup : true})
-    if (globalData.userPhoto === null) {
-      wx.navigateTo({
-        url: `/pages/login_worker/login_worker?id=${e.currentTarget.dataset.hi}`,
-      })
-    } else if (globalData.userId ===  e.currentTarget.dataset.customer_id) {
+    if (globalData.userId === e.currentTarget.dataset.customer_id) {
       wx.showModal({
         title: ' 错误!',
         content: "你不能添加自己的包裹!",
@@ -61,6 +57,21 @@ Page({
             console.log('cancel')
           }
         }
+      })
+} else if (globalData.userPhoto === null) {
+      wx.showModal({
+        title: ' 错误!',
+        content: "你不能添加自己的包裹!",
+        success: function (res) {
+          if (res.confirm) {
+            console.log('confirm')
+          } else if (res.cancel) {
+            console.log('cancel')
+          }
+        }
+      })
+      wx.navigateTo({
+        url: `/pages/login_worker/login_worker?id=${e.currentTarget.dataset.hi}`,
       })
     } else {
     wx.showModal({

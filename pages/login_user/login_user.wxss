@@ -12,6 +12,10 @@ page {
 
 
 /* form style */
+form {
+  width: 80vw;
+}
+
 .user-input {
   width: 100%;
   margin-bottom: 50rpx;
@@ -22,7 +26,7 @@ page {
 .input-label {
   font-size: 10rpx;
 } */
-textarea {
+input {
   padding: 10rpx 0;
   font-size: 35rpx;
 }
@@ -43,14 +47,13 @@ textarea {
   color: white;
   margin: 100rpx;
   width: 420rpx;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
   font-weight: bold;
 }
 button {
   border-radius: 0;
   box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
-
 }
 .home-location {
   box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;

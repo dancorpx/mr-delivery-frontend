@@ -6,9 +6,9 @@ const AV = require('../../utils/av-weapp-min.js');
 
 Page({
     data: {
-      // name: "姓名",
-      // student_number: "学生卡号",
-      // phone_number: "手机号",
+      name: "姓名",
+      student_number: "学生卡号",
+      phone_number: "手机号",
       address_name: "请选择宿舍楼",
       show: 'display: none;'
     },
@@ -172,6 +172,7 @@ takePhoto2: function () {
 
   onLoad: function (options) {
     console.log(555,options)
+    if (globalData.userName != null){
     this.setData({
       currentPackage: options.id,
       name: globalData.userName,
@@ -182,6 +183,7 @@ takePhoto2: function () {
       address_lng: globalData.userAddressLng,
     })
     console.log(112233, this.data)
+    }
   },
 
 
