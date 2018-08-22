@@ -310,10 +310,10 @@ border-radius: 10rpx;
   position: fixed;
   opacity: 1;
   z-index: 3;
-  background-color:rgba(159, 218, 240, 0.788);
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: rgba(0, 96, 160, 0.788);
 }
 
 .expanded-card {
