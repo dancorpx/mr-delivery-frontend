@@ -7,13 +7,6 @@ const AV = require('../../utils/av-weapp-min.js');
 Page({
     data: {
       showPopup: true,
-      imgUrls: [
-          "/lib/images/MrD-Login-edit.jpg",
-        "/lib/images/MrD-Login-edit.jpg",
-        "/lib/images/MrD-Login-edit.jpg",
-        "/lib/images/MrD-Login-edit.jpg",
-        "/lib/images/MrD-Login-edit.jpg"
-      ],
 
       // name: "姓名",
       // student_number: "学生卡号",
