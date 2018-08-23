@@ -1,4 +1,23 @@
 <!--pages/login_worker/login_worker.wxml-->
+<swiper  class="flex-display whole-page" wx:if="{{showPopup}}"  indicator-dots="true">
+      <swiper-item>
+        <image src="/lib/images/MrD-Login-Screen1.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/lib/images/MrD-Login-Screen2.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/lib/images/MrD-Login-Screen3.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/lib/images/MrD-Login-Screen4.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/lib/images/MrD-Login-Screen5.jpg"/>
+        <button class="complete-button" bindtap="closePopup">确认</button>
+      </swiper-item>
+</swiper>
+
 <!-- heading -->
 <view class="container">
   <view class="heading">包裹同学登录</view>

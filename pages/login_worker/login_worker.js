@@ -6,11 +6,18 @@ const AV = require('../../utils/av-weapp-min.js');
 
 Page({
     data: {
+      showPopup: true,
+
       // name: "姓名",
       // student_number: "学生卡号",
       // phone_number: "手机号",
       address_name: "请选择宿舍楼",
       show: 'display: none;'
+    },
+
+
+    closePopup: function() {
+      this.setData({showPopup: false})
     },
 
   getUserInfo: function (e) {

@@ -3,6 +3,44 @@ page {
   background-color: #9FDAF0;
 }
 
+.flex-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.whole-page {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  opacity: 1;
+  z-index: 3;
+  background-color:rgba(0, 95, 160, 0.788);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+swiper-item  image {
+  flex: 0 0 auto;
+  width: 75vw;
+  margin: 7vh 12.5vw;
+  min-height: 75vh ;
+}
+
+.complete-button{
+  position: absolute;
+  bottom: 10vw;
+  left: 35vw;
+  width: 30vw;
+  background-color: rgba(57, 207, 57, 0.658);
+  color: white;
+  text-shadow: 2px 2px rgba(128, 128, 128, 0.4);
+  border-radius: 5px;
+  padding: 8rpx;
+}
+
 .heading {
   color: white;
   font-weight: bold;
