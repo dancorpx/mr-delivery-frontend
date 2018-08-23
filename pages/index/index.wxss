@@ -327,5 +327,5 @@ border-radius: 10rpx;
   top: 550rpx;
   font-size: 28rpx;
   font-weight: lighter;
-  opacity: 0
+  opacity: 1
 }

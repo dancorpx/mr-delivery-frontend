@@ -198,10 +198,11 @@ Page({
     this.setData({ shouldNotPopup: false })
 
     var animation = wx.createAnimation({
-      duration: 4000,
+      duration: 3000,
       timeFunction: 'ease-in-out',
       delay: 0,
     })
+    animation.opacity(0).step()
     animation.opacity(1).step()
     animation.opacity(0).step()
     animation.opacity(1).step()
