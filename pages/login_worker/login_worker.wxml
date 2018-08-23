@@ -28,9 +28,10 @@
 
    <view class="button-container"> 
      <view class='image-upload'>
+      
       <view class="weui-uploader__input-box">
-      <view class="placehold-div" style=" background: url({{tempPhotoPlaceholder}})">
-      </view>
+      <image class="placehold-div" src="{{tempPhotoPlaceholder}}" mode="aspectFit"> 
+      </image>
         <view class="weui-uploader__input" bindtap="takePhoto1"> </view>
       </view>
       <view class='text'>
@@ -39,8 +40,8 @@
      </view>
      <view class='image-upload'>
       <view class="weui-uploader__input-box">
-      <view class="placehold-div" style=" background: url({{tempQrPlaceholder}});">
-      </view>
+      <image class="placehold-div" src="{{tempQrPlaceholder}}" mode="aspectFit"> 
+      </image>
         <view class="weui-uploader__input" bindtap="takePhoto2">
         </view>
       </view>
