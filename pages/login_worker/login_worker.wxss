@@ -73,8 +73,9 @@ button {
 .submit-button {
   background-color: rgba(57, 207, 57, 0.658);
   color: white;
-  margin: 100rpx;
-  width: 420rpx;
+  margin: 40rpx auto;
+  margin-bottom: 0;
+  width: 60vw;
   /* margin-left: 120rpx; */
   box-shadow: 8rpx 8rpx 6rpx -6rpx #000000 ;
   font-weight: bold;
@@ -82,9 +83,10 @@ button {
 /* submit button */
 /* Buttons */
 .placehold-div {
- width:150rpx;
- height:150rpx;
- background-size: 100%;
+ max-width: 150rpx;
+  max-height: 150rpx; 
+ background-repeat: no-repeat;
+ background-size: cover;
  background-position: center;
 }
 
