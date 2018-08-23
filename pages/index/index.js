@@ -196,6 +196,21 @@ Page({
     this.setData({showPopup:true})
     }
     this.setData({ shouldNotPopup: false })
+
+    var animation = wx.createAnimation({
+      duration: 4000,
+      timeFunction: 'ease-in-out',
+      delay: 0,
+    })
+    animation.opacity(1).step()
+    animation.opacity(0).step()
+    animation.opacity(1).step()
+    animation.opacity(0).step()
+    animation.opacity(1).step()
+    animation.opacity(0).step()
+    this.setData({
+      animation: animation.export(),
+    })
   },
 
   closePopup: function (e) {

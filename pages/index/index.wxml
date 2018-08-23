@@ -4,6 +4,9 @@
 <view class="flex-display whole-page" wx:if="{{showPopup}}" bindtap="closePopup">
     <view class="expanded-card">
       <view class="card-outer-border">
+        <view class='message' animation="{{animation}}">
+          包裹信息将在添加后显示
+        </view>
         <view class='row-1'>
           <view class='avatar red-border'>
             <image class="avatar-img" src="{{avatar}}" ></image>
