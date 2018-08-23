@@ -99,16 +99,8 @@ Page({
       path: 'packages/available',
         success(res) {
           console.log(9999,res)
-          // let trimmedNames = []
-          // res.data.packages.forEach(function (element) {
-           
-          //   trimmedNames.push(element.delivery_location_name.replace("四川大学江安校区", ""))
-          // })
-        
-          page.setData({packages: res.data.packages.reverse()})
-          // page.setData({ trimmedNames: trimmedNames })
-
-         console.log(88888, page.data)
+          page.setData({packages: res.data.packages})
+          console.log(88888, page.data)
         }
       })
   },
@@ -151,14 +143,8 @@ Page({
       path: 'packages/available',
       success(res) {
         console.log(9999, res)
-        let trimmedNames = []
-        res.data.packages.forEach(function (element) {
-
-          trimmedNames.push(element.delivery_location_name.replace("四川大学江安校区", ""))
-        })
 
         page.setData({ packages: res.data.packages.reverse() })
-        page.setData({ trimmedNames: trimmedNames })
 
         console.log(88888, page.data)
       }
