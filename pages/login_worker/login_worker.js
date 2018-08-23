@@ -22,8 +22,9 @@ Page({
     })
 
     wx.showToast({ title: '登录中...', icon: 'loading', duration: 1000 })
-    console.log(7777, globalData)
+    console.log(222, globalData)
   if (page.data.photo === undefined || page.data.static_pay_qr === undefined ){
+    console.log(2233, "no photos")
     wx.showModal({
       title: '错误',
       content: '您输入的信息有误',
@@ -36,6 +37,7 @@ Page({
       }
     })
   } else {
+    console.log(2244, "photos ok")
     myRequest.put({
       path: `users/${globalData.userId}`,
       data: {
@@ -50,8 +52,9 @@ Page({
         avatar: page.data.avatar
       },
       success(res) {
-        console.log(98989, res)
+        console.log(333, res)
         if (res.statusCode > 300) {
+          console.log(334455," update user- issue: over 300")
           wx.showModal({
             title: '错误',
             content: '您输入的信息有误',
@@ -64,6 +67,7 @@ Page({
             }
           })
         } else {
+          console.log(444, "update user ok")
           globalData.userName = res.data.name
           globalData.userStudentNumber = res.data.student_number
           globalData.userPhoneNumber = res.data.phone_number
@@ -74,6 +78,7 @@ Page({
           globalData.userPhoto = res.data.photo
           globalData.userAvatar = res.data.avatar
 
+          console.log(444, globalData)
           console.log(987654321, page.data.currentPackage)
 
           myRequest.post({
@@ -83,7 +88,8 @@ Page({
               package_id: page.data.currentPackage
             },
             success(res) {
-              console.log(98989, res)
+              console.log(555, "post delivery, next update package to accepted")
+              console.log(555, res)
               myRequest.put({
                 path: `packages/${page.data.currentPackage}`,
                 data: {
@@ -91,7 +97,8 @@ Page({
                   accepted: true,
                 },
                 success(res) {
-                  console.log(999999, res)
+                  console.log(666, "change package to accepted: result")
+                  console.log(666, res)
                 }
               })
             }
