@@ -145,7 +145,7 @@
 
 <!-- my accepted packages  -->
 
-  <view class="section-title">快递运送中</view>
+  <view class="section-title">包裹运送中</view>
 
 <view class="flex-display">
   <block wx:for="{{acceptedPackages}}" wx:for-item="package" wx:key="packages">
