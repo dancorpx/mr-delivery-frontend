@@ -320,3 +320,12 @@ border-radius: 10rpx;
 .expanded-card {
   min-width: 98% 
 }
+
+.message {
+  position: fixed;
+  right: 35rpx;
+  top: 550rpx;
+  font-size: 28rpx;
+  font-weight: lighter;
+  opacity: 1
+}
