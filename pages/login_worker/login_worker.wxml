@@ -14,6 +14,9 @@
       </swiper-item>
       <swiper-item>
         <image src="/lib/images/MrD-Login-Screen5.jpg"/>
+        </swiper-item>
+      <swiper-item>
+        <image src="/lib/images/user-login-screen2.jpg"/>
         <button class="complete-button" bindtap="closePopup">确认</button>
       </swiper-item>
 </swiper>
