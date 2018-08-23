@@ -5,8 +5,14 @@ const myRequest = require('../../lib/api/request')
 
 Page({
   data: {
+    showPopup: true,
     address_name: "请选择宿舍楼",
   },
+
+  closePopup: function () {
+    this.setData({ showPopup: false })
+  },
+
 
   getUserInfo: function (e) {
     let page = this

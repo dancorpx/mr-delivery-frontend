@@ -1,4 +1,14 @@
 <!--pages/login_user/login_user.wxml-->
+<swiper  class="flex-display whole-page" wx:if="{{showPopup}}"  indicator-dots="true">
+      <swiper-item>
+        <image src="/lib/images/user-Login-Screen1.jpg"/>
+      </swiper-item>
+      <swiper-item>
+        <image src="/lib/images/user-login-screen2.jpg"/>
+        <button class="complete-button" bindtap="closePopup">确认</button>
+      </swiper-item>
+</swiper>
+
 <!-- heading -->
 <view class="container">
   <view class="heading">登录</view>
