@@ -11,7 +11,7 @@
     </view>
     
     <view class="section">
-      <view class="section__title">请选择时间</view>
+      <view class="section__title">请选择接受包裹时间</view>
        <view class="section-time">
       <picker mode="time" value="{{time1}}" start="00:01" end="23:59" bindchange="bindStartTimeChange">
           <view class="picker text-area-wrap">
@@ -39,7 +39,7 @@
         </view>
       </view>
 
-      <view class="section__title">包裹信息:</view>
+      <view class="section__title">收件人信息:</view>
     <view class="user-input">
       <view class="text-area-wrap">
         <input value='{{name}}' name="name_on_package" auto-height />

@@ -56,8 +56,15 @@ image {
   position: absolute;
   margin: 25rpx;
   text-align: center;
+  left: 40rpx;
 }
-
+.message {
+  text-align: center;
+  margin: 150rpx;
+  width: 200rpx;
+  font-size: 30rpx;
+  font-weight: lighter;
+}
 
 .complete-button{
   position: absolute;
