@@ -4,6 +4,7 @@
       <view class="title">
         请输入验证码
       </view>
+      <view class='message'>请向包裹主人确认验证码</view>
       <form class="form" bindsubmit="bindSubmit">
         <view class="user-input">
           <view class="text-area-wrap"> 
